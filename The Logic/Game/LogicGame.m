@@ -19,6 +19,12 @@
 
 @implementation LogicGame
 
+- (void)dealloc {
+    if (_timer) {
+        [_timer invalidate];
+    }
+}
+
 - (id)init {
     self = [super init];
     if (self) {

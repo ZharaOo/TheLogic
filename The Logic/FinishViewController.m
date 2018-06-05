@@ -18,7 +18,10 @@
     
     __weak IBOutlet UIView *_hintView;
     __weak IBOutlet UISwitch *_hintSwitch;
+    
+    BOOL _rateShown;
 }
+
 @property (strong, nonatomic) GADInterstitial *interstitial;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView1;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView2;
@@ -57,6 +60,8 @@
     [self showRightSequense];
     [self showScore];
     
+    _rateShown = NO;
+    
     if ([[NSUserDefaults standardUserDefaults] stringForKey:kGameConstRules]) {
         self.interstitial = [self createAndLoadInterstitialWithId:@"ca-app-pub-8013517248040410/5289313347"];
         [self showHintView];
@@ -79,7 +84,9 @@
     }
     else {
         if (@available(iOS 10.3, *)) {
-            [SKStoreReviewController requestReview];
+            if (!_rateShown) {
+                [SKStoreReviewController requestReview];
+            }
         }
     }
 }
