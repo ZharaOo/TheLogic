@@ -19,17 +19,13 @@
     // Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 - (IBAction)resumeGame:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (IBAction)playAgain:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
+    [self.delegate startNewGame];
 }
 
 - (IBAction)mainMenu:(id)sender {

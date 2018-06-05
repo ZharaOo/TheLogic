@@ -421,7 +421,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.babkin.logicgamepro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "1900f9c8-502b-4c6b-bc13-22f051d50b56";
+				PROVISIONING_PROFILE = "cb17d118-4419-447f-b028-352c3210f8a5";
 				PROVISIONING_PROFILE_SPECIFIER = "Logic Distribution";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -440,7 +440,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.babkin.logicgamepro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "1900f9c8-502b-4c6b-bc13-22f051d50b56";
+				PROVISIONING_PROFILE = "cb17d118-4419-447f-b028-352c3210f8a5";
 				PROVISIONING_PROFILE_SPECIFIER = "Logic Distribution";
 				TARGETED_DEVICE_FAMILY = 1;
 			};

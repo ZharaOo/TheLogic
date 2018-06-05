@@ -18,11 +18,12 @@ typedef NS_ENUM(NSUInteger, ChipColor) {
     White
 };
 
-static NSString * const kGameConstRules = @"Rules";
-static NSString * const kGameConstHint = @"Hint";
-static NSString * const kGameConstBestTime = @"BestTime";
-static NSString * const kGameConstBestMoves = @"BestMoves";
+static NSString *const kGameConstRules = @"Rules";
+static NSString *const kGameConstHint = @"Hint";
+static NSString *const kGameConstBestTime = @"BestTime";
+static NSString *const kGameConstBestMoves = @"BestMoves";
 
-static NSString * const kGameConstGameToFinish = @"gameToFinishSegue";
+static NSString *const kGameConstGameToFinish = @"gameToFinishSegue";
+static NSString *const kGameConstGameToPause = @"gameToPauseSegue";
 
 #endif /* GameConst_h */

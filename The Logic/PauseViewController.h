@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol PauseViewControllerDelegate <NSObject>
+- (void)startNewGame;
+@end
+
 @interface PauseViewController : UIViewController
+
+@property (nonatomic, weak) id <PauseViewControllerDelegate> delegate;
 
 @end

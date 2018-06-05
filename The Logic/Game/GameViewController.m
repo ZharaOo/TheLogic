@@ -8,6 +8,7 @@
 
 #import "GameViewController.h"
 #import "FinishViewController.h"
+#import "PauseViewController.h"
 
 #import "GameConst.h"
 
@@ -15,7 +16,7 @@
 #import "LogicGame.h"
 #import "ChipButton.h"
 
-@interface GameViewController () <FinishViewControllerDelegate, LogicGameDelegate, RowDelegate> {
+@interface GameViewController () <FinishViewControllerDelegate, PauseViewControllerDelegate, LogicGameDelegate, RowDelegate> {
     
     __weak IBOutlet ChipButton *_yellowButton;
     __weak IBOutlet ChipButton *_greenButton;
@@ -23,6 +24,7 @@
     __weak IBOutlet ChipButton *_blackButton;
     __weak IBOutlet ChipButton *_redButton;
     __weak IBOutlet ChipButton *_whiteButton;
+    __weak IBOutlet UILabel *movesLabel;
     
     NSMutableArray<Row *> *rows;
     NSArray *playerSequence;
@@ -61,6 +63,7 @@
 }
 
 - (void)addRowToScrollView {
+    movesLabel.text = [NSString stringWithFormat:@"Moves: %ld", (long)self.game.moves];
     CGFloat width = CGRectGetWidth(self.scrollView.frame); 
     CGFloat height = width * 0.2;
     
@@ -136,17 +139,17 @@
                 numberOfBlack++;
             }
         }
-        NSString *answerForBlack = (numberOfBlack ? [NSString stringWithFormat:@"%lu из них стоят на своем месте. ", numberOfBlack] : @"");
+        NSString *answerForBlack = (numberOfBlack ? [NSString stringWithFormat:@"%ld из них стоят на своем месте. ", (long)numberOfBlack] : @"");
         NSString *answerForWhite = nil;
         
         if ([answerForBlack isEqualToString:@""]) {
             answerForWhite = @"При этом все цвета стоят не на своем месте.";
         }
         else {
-            answerForWhite = (numberOfWhite ? [NSString stringWithFormat:@"Для %lu цветов место неверно. ", numberOfWhite] : @"");
+            answerForWhite = (numberOfWhite ? [NSString stringWithFormat:@"Для %ld цветов место неверно. ", (long)numberOfWhite] : @"");
         }
         
-        return [NSString stringWithFormat:@"%@ вы правильно угадали %lu цветов. %@%@", start, rows[i].answer.count, answerForBlack, answerForWhite];
+        return [NSString stringWithFormat:@"%@ вы правильно угадали %ld цветов. %@%@", start, (long)rows[i].answer.count, answerForBlack, answerForWhite];
     }
     else {
         return [NSString stringWithFormat:@"%@ вы не угадали ни одного цвета. ", start];
@@ -210,11 +213,15 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:kGameConstGameToFinish]) {
-        FinishViewController *dvc = (FinishViewController *)[segue destinationViewController];
+        FinishViewController *dvc = (FinishViewController *)segue.destinationViewController;
         dvc.delegate = self;
         dvc.rightSequense = playerSequence;
         dvc.moves = self.game.moves;
         dvc.time = self.game.time;
+    }
+    else if ([segue.identifier isEqualToString:kGameConstGameToPause]) {
+        PauseViewController *dvc = (PauseViewController *)segue.destinationViewController;
+        dvc.delegate = self;
     }
 }
 

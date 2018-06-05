@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 @class Time;
+
 @protocol FinishViewControllerDelegate <NSObject>
 - (void)startNewGame;
 @end

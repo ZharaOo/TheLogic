@@ -132,21 +132,21 @@
 - (void)showScore {
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
     NSInteger bestScore = [ud integerForKey:kGameConstBestMoves];
-    self.movesLabel.text = [NSString stringWithFormat:@"Moves: %lu\nBest: %lu", self.moves, bestScore];
+    self.movesLabel.text = [NSString stringWithFormat:@"Moves: %ld\nBest: %ld", (long)self.moves, (long)bestScore];
     
     Time *bestTime = (Time *)[NSKeyedUnarchiver unarchiveObjectWithData:[ud objectForKey:kGameConstBestTime]];
     if (self.time.seconds < 10) {
-        self.timeLabel.text = [NSString stringWithFormat:@"Time: 0%lu:0%lu\n", (unsigned long)self.time.minutes, self.time.seconds];
+        self.timeLabel.text = [NSString stringWithFormat:@"Time: 0%ld:0%ld\n", (long)self.time.minutes, (long)self.time.seconds];
     }
     else {
-        self.timeLabel.text = [NSString stringWithFormat:@"Time: 0%lu:%lu\n", self.time.minutes, self.time.seconds];
+        self.timeLabel.text = [NSString stringWithFormat:@"Time: 0%ld:%ld\n", (long)self.time.minutes, (long)self.time.seconds];
     }
     
     if (bestTime.seconds < 10) {
-        self.timeLabel.text = [NSString stringWithFormat:@"%@Best: 0%lu:0%lu", self.timeLabel.text, bestTime.minutes, bestTime.seconds];
+        self.timeLabel.text = [NSString stringWithFormat:@"%@Best: 0%ld:0%ld", self.timeLabel.text, (long)bestTime.minutes, (long)bestTime.seconds];
     }
     else {
-        self.timeLabel.text = [NSString stringWithFormat:@"%@Best: 0%lu:%lu", self.timeLabel.text, bestTime.minutes, bestTime.seconds];
+        self.timeLabel.text = [NSString stringWithFormat:@"%@Best: 0%ld:%ld", self.timeLabel.text, (long)bestTime.minutes, (long)bestTime.seconds];
     }
 }
 
