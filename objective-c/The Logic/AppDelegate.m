@@ -16,7 +16,6 @@
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [GADMobileAds configureWithApplicationID:@"ca-app-pub-8013517248040410~3812580147"];
     
