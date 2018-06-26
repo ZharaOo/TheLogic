@@ -9,7 +9,6 @@
 #import "RulesViewController.h"
 
 @interface RulesViewController () {
-    
     __weak IBOutlet UIScrollView *_scrollView;
 }
 @end
@@ -31,13 +30,13 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    [self.navigationController setNavigationBarHidden:NO animated:animated];
     [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:NO animated:animated];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
-    [self.navigationController setNavigationBarHidden:YES animated:animated];
     [super viewWillDisappear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:animated];
 }
 
 @end

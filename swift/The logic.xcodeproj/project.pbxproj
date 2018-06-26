@@ -9,10 +9,21 @@
 /* Begin PBXBuildFile section */
 		233E47A0BB173D877D0FFD04 /* Pods_The_logic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B8EE5A26543BFEC822988E9 /* Pods_The_logic.framework */; };
 		DF5A465020CF209A00C85462 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5A464F20CF209A00C85462 /* AppDelegate.swift */; };
-		DF5A465220CF209A00C85462 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5A465120CF209A00C85462 /* ViewController.swift */; };
+		DF5A465220CF209A00C85462 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5A465120CF209A00C85462 /* StartViewController.swift */; };
 		DF5A465520CF209A00C85462 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF5A465320CF209A00C85462 /* Main.storyboard */; };
 		DF5A465720CF209B00C85462 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF5A465620CF209B00C85462 /* Assets.xcassets */; };
 		DF5A465A20CF209B00C85462 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF5A465820CF209B00C85462 /* LaunchScreen.storyboard */; };
+		DF5A466220CF278800C85462 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5A466120CF278800C85462 /* Constants.swift */; };
+		DF5A466420CF291C00C85462 /* LogicGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5A466320CF291C00C85462 /* LogicGame.swift */; };
+		DF5A466620CF2C2B00C85462 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5A466520CF2C2B00C85462 /* Time.swift */; };
+		DF5A466820CFBA5100C85462 /* ChipClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5A466720CFBA5100C85462 /* ChipClasses.swift */; };
+		DF5A466A20CFD4C000C85462 /* RowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5A466920CFD4C000C85462 /* RowView.swift */; };
+		DF5A466C20CFD54700C85462 /* RowView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF5A466B20CFD54700C85462 /* RowView.xib */; };
+		DF5A466E20CFEC3A00C85462 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5A466D20CFEC3A00C85462 /* GameViewController.swift */; };
+		DF84A72A20D068AB00867A77 /* FinishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF84A72920D068AB00867A77 /* FinishViewController.swift */; };
+		DF84A72C20D0759400867A77 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF84A72B20D0759400867A77 /* StoreKit.framework */; };
+		DF84A72E20D10F6000867A77 /* PauseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF84A72D20D10F6000867A77 /* PauseViewController.swift */; };
+		DF84A73020D1114700867A77 /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF84A72F20D1114700867A77 /* RulesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,11 +31,22 @@
 		5B8EE5A26543BFEC822988E9 /* Pods_The_logic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_The_logic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF5A464C20CF209A00C85462 /* The logic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The logic.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF5A464F20CF209A00C85462 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DF5A465120CF209A00C85462 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DF5A465120CF209A00C85462 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		DF5A465420CF209A00C85462 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DF5A465620CF209B00C85462 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DF5A465920CF209B00C85462 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DF5A465B20CF209B00C85462 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF5A466120CF278800C85462 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		DF5A466320CF291C00C85462 /* LogicGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogicGame.swift; sourceTree = "<group>"; };
+		DF5A466520CF2C2B00C85462 /* Time.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
+		DF5A466720CFBA5100C85462 /* ChipClasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChipClasses.swift; sourceTree = "<group>"; };
+		DF5A466920CFD4C000C85462 /* RowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowView.swift; sourceTree = "<group>"; };
+		DF5A466B20CFD54700C85462 /* RowView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RowView.xib; sourceTree = "<group>"; };
+		DF5A466D20CFEC3A00C85462 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		DF84A72920D068AB00867A77 /* FinishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishViewController.swift; sourceTree = "<group>"; };
+		DF84A72B20D0759400867A77 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		DF84A72D20D10F6000867A77 /* PauseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseViewController.swift; sourceTree = "<group>"; };
+		DF84A72F20D1114700867A77 /* RulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewController.swift; sourceTree = "<group>"; };
 		F436A579A26F8757362B7D34 /* Pods-The logic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The logic.release.xcconfig"; path = "Pods/Target Support Files/Pods-The logic/Pods-The logic.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -33,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF84A72C20D0759400867A77 /* StoreKit.framework in Frameworks */,
 				233E47A0BB173D877D0FFD04 /* Pods_The_logic.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -43,6 +66,7 @@
 		683926BE02B457EA7A5FA2B5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DF84A72B20D0759400867A77 /* StoreKit.framework */,
 				5B8EE5A26543BFEC822988E9 /* Pods_The_logic.framework */,
 			);
 			name = Frameworks;
@@ -70,13 +94,31 @@
 			isa = PBXGroup;
 			children = (
 				DF5A464F20CF209A00C85462 /* AppDelegate.swift */,
-				DF5A465120CF209A00C85462 /* ViewController.swift */,
+				DF5A466120CF278800C85462 /* Constants.swift */,
+				DF5A465120CF209A00C85462 /* StartViewController.swift */,
+				DF5A466F20CFEC4500C85462 /* Game */,
+				DF84A72920D068AB00867A77 /* FinishViewController.swift */,
+				DF84A72D20D10F6000867A77 /* PauseViewController.swift */,
+				DF84A72F20D1114700867A77 /* RulesViewController.swift */,
 				DF5A465320CF209A00C85462 /* Main.storyboard */,
 				DF5A465620CF209B00C85462 /* Assets.xcassets */,
 				DF5A465820CF209B00C85462 /* LaunchScreen.storyboard */,
 				DF5A465B20CF209B00C85462 /* Info.plist */,
 			);
 			path = "The logic";
+			sourceTree = "<group>";
+		};
+		DF5A466F20CFEC4500C85462 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				DF5A466D20CFEC3A00C85462 /* GameViewController.swift */,
+				DF5A466320CF291C00C85462 /* LogicGame.swift */,
+				DF5A466720CFBA5100C85462 /* ChipClasses.swift */,
+				DF5A466520CF2C2B00C85462 /* Time.swift */,
+				DF5A466920CFD4C000C85462 /* RowView.swift */,
+				DF5A466B20CFD54700C85462 /* RowView.xib */,
+			);
+			path = Game;
 			sourceTree = "<group>";
 		};
 		DF8DE04C97C119DE7131D132 /* Pods */ = {
@@ -150,6 +192,7 @@
 				DF5A465A20CF209B00C85462 /* LaunchScreen.storyboard in Resources */,
 				DF5A465720CF209B00C85462 /* Assets.xcassets in Resources */,
 				DF5A465520CF209A00C85462 /* Main.storyboard in Resources */,
+				DF5A466C20CFD54700C85462 /* RowView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,8 +224,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF5A465220CF209A00C85462 /* ViewController.swift in Sources */,
+				DF5A465220CF209A00C85462 /* StartViewController.swift in Sources */,
 				DF5A465020CF209A00C85462 /* AppDelegate.swift in Sources */,
+				DF84A72A20D068AB00867A77 /* FinishViewController.swift in Sources */,
+				DF5A466A20CFD4C000C85462 /* RowView.swift in Sources */,
+				DF5A466820CFBA5100C85462 /* ChipClasses.swift in Sources */,
+				DF5A466E20CFEC3A00C85462 /* GameViewController.swift in Sources */,
+				DF5A466620CF2C2B00C85462 /* Time.swift in Sources */,
+				DF84A72E20D10F6000867A77 /* PauseViewController.swift in Sources */,
+				DF5A466420CF291C00C85462 /* LogicGame.swift in Sources */,
+				DF84A73020D1114700867A77 /* RulesViewController.swift in Sources */,
+				DF5A466220CF278800C85462 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,14 +382,15 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6X84E35ZA8;
 				INFOPLIST_FILE = "The logic/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "ru.babkin.The-logic";
+				PRODUCT_BUNDLE_IDENTIFIER = ru.babkin.logicgamepro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -349,14 +402,15 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6X84E35ZA8;
 				INFOPLIST_FILE = "The logic/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "ru.babkin.The-logic";
+				PRODUCT_BUNDLE_IDENTIFIER = ru.babkin.logicgamepro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
