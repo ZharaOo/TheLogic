@@ -15,7 +15,7 @@ class StartViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         let ud = UserDefaults.standard
-        if ud.string(forKey: Constants.kRules) != nil {
+        if ud.string(forKey: Constants.kRules) == nil {
             hintView.isHidden = true
         }
         else {
