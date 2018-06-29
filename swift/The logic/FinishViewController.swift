@@ -65,9 +65,11 @@ class FinishViewController: UIViewController, GADInterstitialDelegate {
             showAlert(title: NSLocalizedString("Подсказки", comment: ""), message: NSLocalizedString("Хотите ли вы оставить подсказки в игре?", comment: "")) { didCancel in
                 if didCancel {
                     ud.set(false, forKey: Constants.kHint)
+                    self.hintSwitch.isOn = false
                 }
                 else {
                     ud.set(true, forKey: Constants.kHint)
+                    self.hintSwitch.isOn = true
                     self.showHintView()
                 }
             }
@@ -78,6 +80,7 @@ class FinishViewController: UIViewController, GADInterstitialDelegate {
                     SKStoreReviewController.requestReview()
                 }
             }
+            self.hintSwitch.isOn = ud.bool(forKey: Constants.kHint)
         }
     }
     

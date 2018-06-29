@@ -19,6 +19,7 @@ class StartViewController: UIViewController {
             hintView.isHidden = true
         }
         else {
+            hintView.isHidden = false
             hintSwitch.isOn = ud.bool(forKey: Constants.kHint)
         }
     }

@@ -52,7 +52,9 @@ class GameViewController: UIViewController, LogicGameDelegate, RowViewDelegate, 
     }
     
     override func viewDidLayoutSubviews() {
-        startGame()
+        if game == nil {
+            startGame()
+        }
     }
 
     func startGame() {
@@ -153,7 +155,7 @@ class GameViewController: UIViewController, LogicGameDelegate, RowViewDelegate, 
             return String(format:NSLocalizedString("%@ вы правильно угадали %ld цветов. %@%@", comment: ""), startString, rows[i].answer!.count, answerForBlack, answerForWhite)
         }
         else {
-            return String(format: NSLocalizedString("%@ вы не угадали ниодного цвета.", comment: ""), startString)
+            return String(format: NSLocalizedString("%@ вы не угадали ни одного цвета.", comment: ""), startString)
         }
     }
 
