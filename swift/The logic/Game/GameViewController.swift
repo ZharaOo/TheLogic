@@ -64,7 +64,7 @@ class GameViewController: UIViewController, LogicGameDelegate, RowViewDelegate, 
     }
 
     func addRowToScrollView() {
-        movesLabel.text = String(format: "Moves: %ld", game.moves)
+        movesLabel.text = String(format: NSLocalizedString("Ходы: %ld", comment: ""), game.moves)
         let width = scrollView.frame.width
         let height = width * 0.2
 
@@ -92,7 +92,7 @@ class GameViewController: UIViewController, LogicGameDelegate, RowViewDelegate, 
     func addHint(height: CGFloat) {
         removeRulesFromScrollView()
 
-        let rulesText = generateAnswerString(startString: "В предыдущем ответе", rowIndex: rows.count - 2)
+        let rulesText = generateAnswerString(startString: NSLocalizedString("В предыдущем ответе", comment: ""), rowIndex: rows.count - 2)
         let rulesHeight = max(self.scrollView.frame.height - CGFloat(rows.count) * height, 115.0)
 
         let rulesView = createRulesView(text: rulesText, frame: CGRect(x: 0.0, y: CGFloat(rows.count) * height, width: scrollView.frame.width, height: rulesHeight))
@@ -107,13 +107,13 @@ class GameViewController: UIViewController, LogicGameDelegate, RowViewDelegate, 
         
         switch rows.count {
         case 1:
-            rulesText = "iPhone загадал последовательность из четырех фишек. Нажимайте на кнопки внизу, чтобы выставить последовательность."
+            rulesText = NSLocalizedString("Игра загадала последовательность из четырех фишек. Нажимайте на кнопки внизу, чтобы выставить последовательность.", comment: "")
         case 2:
-            rulesText = "Фишки справа вверху показывают правильность ответа. Черная фишка означает, что угадан какой-то цвет и он стоит на своем месте. Белая фишка означает, что был угадан цвет, но он стоит не на своем месте."
+            rulesText = NSLocalizedString("Фишки справа вверху показывают правильность ответа. Черная фишка означает, что угадан какой-то цвет и он стоит на своем месте. Белая фишка означает, что был угадан цвет, но он стоит не на своем месте.", comment: "")
         case 3:
-            rulesText = String(format: "%@\n%@", generateAnswerString(startString:"Например, в первом ответе ", rowIndex: 0), generateAnswerString(startString: "В предыдущем ответе", rowIndex: 1))
+            rulesText = String(format: "%@\n%@", generateAnswerString(startString:NSLocalizedString("Например, в первом ответе", comment: ""), rowIndex: 0), generateAnswerString(startString:NSLocalizedString("В предыдущем ответе", comment: ""), rowIndex: 1))
         default:
-            rulesText = generateAnswerString(startString: "В предыдущем ответе", rowIndex: rows.count - 2)
+            rulesText = generateAnswerString(startString: NSLocalizedString("В предыдущем ответе", comment: ""), rowIndex: rows.count - 2)
         }
         
         let rulesHeight = max(scrollView.frame.height - CGFloat(rows.count) * height, 115.0)
@@ -137,20 +137,20 @@ class GameViewController: UIViewController, LogicGameDelegate, RowViewDelegate, 
                 }
             }
 
-            let answerForBlack = numberOfBlack > 0 ? String(format: "%d из них стоят на своем месте. ", numberOfBlack) : ""
+            let answerForBlack = numberOfBlack > 0 ? String(format:NSLocalizedString("%d из них стоят на своем месте.", comment: ""), numberOfBlack) : ""
             var answerForWhite = ""
 
             if answerForBlack == "" {
-                answerForWhite = "При этом все цвета стоят не на своем месте."
+                answerForWhite = NSLocalizedString("При этом все цвета стоят не на своем месте.", comment: "")
             }
             else {
-                answerForWhite = numberOfWhite > 0 ? String(format:"Для %d цветов место неверно. ", numberOfWhite) : ""
+                answerForWhite = numberOfWhite > 0 ? String(format:NSLocalizedString("Для %d цветов место неверно.", comment: ""), numberOfWhite) : ""
             }
 
-            return String(format:"%@ вы правильно угадали %ld цветов. %@%@", startString, rows[i].answer!.count, answerForBlack, answerForWhite)
+            return String(format:NSLocalizedString("%@ вы правильно угадали %ld цветов. %@%@", comment: ""), startString, rows[i].answer!.count, answerForBlack, answerForWhite)
         }
         else {
-            return String(format: "%@ вы не угадали ниодного цвета. ", startString)
+            return String(format: NSLocalizedString("%@ вы не угадали ниодного цвета.", comment: ""), startString)
         }
     }
 

@@ -138,11 +138,11 @@ class FinishViewController: UIViewController, GADInterstitialDelegate {
     func showScore() {
         let ud = UserDefaults.standard
         let bestMoves = ud.integer(forKey: Constants.kBestMoves)
-        movesLabel.text = String(format: "Moves: %ld\nBest: %ld", moves, bestMoves)
+        movesLabel.text = String(format: NSLocalizedString("Ходы: %ld\nЛучшие: %ld", comment: ""), moves, bestMoves)
         
         if let dataBestTime = ud.data(forKey: Constants.kBestTime) {
             let bestTime = NSKeyedUnarchiver.unarchiveObject(with: dataBestTime) as! Time
-            timeLabel.text = String(format: "Time: %@\nBest: %@", time.description(), bestTime.description())
+            timeLabel.text = String(format: NSLocalizedString("Время: %@\nЛучшее: %@", comment: ""), time.description(), bestTime.description())
         }
     }
     

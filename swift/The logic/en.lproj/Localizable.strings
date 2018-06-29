@@ -1,0 +1,20 @@
+/* 
+  Localizable.strings
+  The logic
+
+  Created by Ivan Babkin on 29.06.2018.
+  Copyright © 2018 Ivan Babkin. All rights reserved.
+*/
+
+"Игра загадала последовательность из четырех фишек. Нажимайте на кнопки внизу, чтобы выставить последовательность." = "The game set a sequence composed of four chips. Press the buttons below to put your version of sequence.";
+"Фишки справа вверху показывают правильность ответа. Черная фишка означает, что угадан какой-то цвет и он стоит на своем месте. Белая фишка означает, что был угадан цвет, но он стоит не на своем месте." = "Upper right chips show accuracy of your answer. Black chip shows that color was guessed and it on the right place. White chip shows that color was guessed and it’s place is wrong.";
+"Например, в первом ответе" = "For instance, in the first answer";
+"В предыдущем ответе" = "In previous answer";
+"@ вы правильно угадали %ld цветов. %@%@" = "@ you guessed %ld colors. %@%@";
+"%@ вы не угадали ниодного цвета." = "%@ you didn’t guess no one color.";
+"%d из них стоят на своем месте." = "%d chips are on the right place.";
+"При этом все цвета стоят не на своем месте." = "Wherein all chips with correct color are on the wrong place.";
+"Для %d цветов место неверно." = "For %d chips with right color place is wrong.";
+"Ходы: %ld" = "Moves: %ld";
+"Ходы: %ld\nЛучшие: %ld" = "Moves: %ld\nBest: %ld";
+"Время: %@\nЛучшее: %@" = "Time: %@\nBest: %@";
