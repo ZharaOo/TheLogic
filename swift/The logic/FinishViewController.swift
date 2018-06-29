@@ -62,7 +62,7 @@ class FinishViewController: UIViewController, GADInterstitialDelegate {
         if ud.string(forKey: Constants.kRules) == nil {
             ud.set("Passed", forKey: Constants.kRules)
             
-            showAlert(title: "Подсказки", message: "Хотите ли вы оставить подсказки в игре?") { didCancel in
+            showAlert(title: NSLocalizedString("Подсказки", comment: ""), message: NSLocalizedString("Хотите ли вы оставить подсказки в игре?", comment: "")) { didCancel in
                 if didCancel {
                     ud.set(false, forKey: Constants.kHint)
                 }

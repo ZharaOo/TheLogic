@@ -18,3 +18,5 @@
 "Ходы: %ld" = "Moves: %ld";
 "Ходы: %ld\nЛучшие: %ld" = "Moves: %ld\nBest: %ld";
 "Время: %@\nЛучшее: %@" = "Time: %@\nBest: %@";
+"Подсказки" = "Prompting";
+"Хотите ли вы оставить подсказки в игре?" = "Do you want to have promptings in a game?";
