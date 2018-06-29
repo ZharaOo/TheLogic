@@ -49,6 +49,9 @@ class GameViewController: UIViewController, LogicGameDelegate, RowViewDelegate, 
         super.viewDidLoad()
 
         initButtons()
+    }
+    
+    override func viewDidLayoutSubviews() {
         startGame()
     }
 
