@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -67,19 +66,19 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X3m-dh-JSQ">
-                                <rect key="frame" x="16" y="517" width="126" height="31"/>
+                                <rect key="frame" x="16" y="517" width="140" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gjz-tM-RIj">
-                                        <rect key="frame" x="77" y="0.0" width="49" height="31"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <rect key="frame" x="91" y="0.0" width="49" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <connections>
                                             <action selector="hintSwitched:" destination="BYZ-38-t0r" eventType="valueChanged" id="hNR-9S-4v1"/>
                                         </connections>
                                     </switch>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hints" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ati-Hd-HZi">
-                                        <rect key="frame" x="0.0" y="0.0" width="69" height="31"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Подсказки" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ati-Hd-HZi">
+                                        <rect key="frame" x="0.0" y="0.0" width="87" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -131,18 +130,19 @@
             <objects>
                 <viewController id="7P0-gn-HZu" customClass="RulesViewController" customModule="The_logic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UnD-G3-RZA">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="770"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S9o-QN-rVb">
-                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="706"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x8N-gG-egT">
-                                        <rect key="frame" x="0.0" y="8" width="320" height="145"/>
+                                        <rect key="frame" x="0.0" y="8" width="320" height="188"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="154" id="OlH-mG-yv4"/>
                                         </constraints>
-                                        <string key="text">The game set a sequence composed of four chips. Your task is to guess this sequence. Chips can be one of six colors. Colors can be repeated.  Press the buttons below to put your version of sequence. </string>
+                                        <string key="text">Игра загадала последовательность из четырех фишек. Ваша задача — угадать эту последовательность. 
+Фишки могут быть шести цветов, цвета могут повторяться.  Нажимайте кнопки внизу экрана, чтобы поставить последовательность из фишек. </string>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         <variation key="heightClass=regular-widthClass=compact">
@@ -152,26 +152,26 @@
                                         </variation>
                                     </textView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="buttonsRules" translatesAutoresizingMaskIntoConstraints="NO" id="cJh-hn-E4u">
-                                        <rect key="frame" x="0.0" y="161" width="320" height="50"/>
+                                        <rect key="frame" x="0.0" y="204" width="320" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="cJh-hn-E4u" secondAttribute="height" multiplier="32:5" id="o7I-VO-Q2Y"/>
                                         </constraints>
                                     </imageView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oJU-Qq-eUo">
-                                        <rect key="frame" x="0.0" y="219" width="320" height="166.5"/>
-                                        <string key="text">Upper right chips show accuracy of your answer. Black chip shows that color was guessed and it on the right place. White chip shows that color was guessed and it’s place is wrong. If there are no chips, no color is guessed.</string>
+                                        <rect key="frame" x="0.0" y="262" width="320" height="188"/>
+                                        <string key="text">Фишки справа вверху показывают правильность ответа. Черная фишка означает, что угадан какой-то цвет и он стоит на своем месте. Белая фишка означает, что был угадан цвет, но он стоит не на своем месте. Если фишек нет, то ни один цвет не угадан.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K8m-rJ-gH3">
-                                        <rect key="frame" x="0.0" y="451.5" width="320" height="166.5"/>
-                                        <string key="text">For instance, answer on upper image shows that three colors is correct. Two colors are on the right place, one color is on the wrong.  
-Try to guess a sequence as fast as you can. Good luck!</string>
+                                        <rect key="frame" x="0.0" y="516" width="320" height="188"/>
+                                        <string key="text">Например, ответ на картинке выше означает, что три цвета угадано. Два цвета стоят на своем месте, один не на своем. 
+ Постарайтесь угадать последовательность как можно быстрее. Удачи!</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imagesRules" translatesAutoresizingMaskIntoConstraints="NO" id="0y7-8S-KQe">
-                                        <rect key="frame" x="0.0" y="393.5" width="320" height="50"/>
+                                        <rect key="frame" x="0.0" y="458" width="320" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="0y7-8S-KQe" secondAttribute="height" multiplier="32:5" id="jwW-yJ-qVs"/>
                                         </constraints>
@@ -212,6 +212,7 @@ Try to guess a sequence as fast as you can. Good luck!</string>
                         <viewLayoutGuide key="safeArea" id="xrH-iC-YyI"/>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <size key="freeformSize" width="320" height="770"/>
                     <connections>
                         <outlet property="scrollView" destination="S9o-QN-rVb" id="Leb-fn-eo6"/>
                     </connections>
@@ -229,7 +230,7 @@ Try to guess a sequence as fast as you can. Good luck!</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uWZ-A0-Uak">
-                                <rect key="frame" x="269" y="25" width="35" height="35"/>
+                                <rect key="frame" x="268" y="25" width="36" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="pause"/>
                                 <connections>
@@ -237,7 +238,7 @@ Try to guess a sequence as fast as you can. Good luck!</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fU2-53-YI0">
-                                <rect key="frame" x="16" y="35" width="108" height="21"/>
+                                <rect key="frame" x="16" y="34" width="108" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -246,7 +247,7 @@ Try to guess a sequence as fast as you can. Good luck!</string>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GES-cw-K9n">
                                 <rect key="frame" x="0.0" y="65" width="320" height="430"/>
                             </scrollView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="NjS-Up-ebO">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="NjS-Up-ebO">
                                 <rect key="frame" x="10" y="498" width="300" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jhX-Wn-tLh" customClass="ChipButton" customModule="The_logic" customModuleProvider="target">
@@ -282,7 +283,7 @@ Try to guess a sequence as fast as you can. Good luck!</string>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ujo-PS-Upe" customClass="ChipButton" customModule="The_logic" customModuleProvider="target">
                                         <rect key="frame" x="150" y="0.0" width="50" height="50"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="Ujo-PS-Upe" secondAttribute="height" multiplier="1:1" id="t02-AQ-OoB"/>
+                                            <constraint firstAttribute="width" secondItem="Ujo-PS-Upe" secondAttribute="height" multiplier="1:1" id="voe-EP-yqc"/>
                                         </constraints>
                                         <state key="normal" backgroundImage="blackButton640"/>
                                         <connections>
@@ -311,127 +312,7 @@ Try to guess a sequence as fast as you can. Good luck!</string>
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="r51-4G-x4h" firstAttribute="firstBaseline" secondItem="UNR-Fs-uRh" secondAttribute="firstBaseline" id="0Xy-Md-6GM"/>
-                                    <constraint firstItem="r51-4G-x4h" firstAttribute="firstBaseline" secondItem="Ujo-PS-Upe" secondAttribute="firstBaseline" id="2Na-Ot-wST"/>
-                                    <constraint firstItem="Ujo-PS-Upe" firstAttribute="firstBaseline" secondItem="UNR-Fs-uRh" secondAttribute="firstBaseline" id="35K-CH-ruC"/>
-                                    <constraint firstItem="jhX-Wn-tLh" firstAttribute="baseline" secondItem="UNR-Fs-uRh" secondAttribute="baseline" id="3Sa-ye-o7l"/>
-                                    <constraint firstItem="CQy-NN-Hnj" firstAttribute="firstBaseline" secondItem="r51-4G-x4h" secondAttribute="firstBaseline" id="3cb-J3-9q7"/>
-                                    <constraint firstItem="r51-4G-x4h" firstAttribute="baseline" secondItem="gkJ-bc-zBY" secondAttribute="baseline" id="4OF-Mt-KtQ"/>
-                                    <constraint firstItem="Ujo-PS-Upe" firstAttribute="baseline" secondItem="jhX-Wn-tLh" secondAttribute="baseline" id="6Mu-HN-pEq"/>
-                                    <constraint firstItem="Ujo-PS-Upe" firstAttribute="baseline" secondItem="jhX-Wn-tLh" secondAttribute="baseline" id="6NB-Dy-wEr"/>
-                                    <constraint firstItem="Ujo-PS-Upe" firstAttribute="firstBaseline" secondItem="jhX-Wn-tLh" secondAttribute="firstBaseline" id="6XB-IQ-Akm"/>
-                                    <constraint firstItem="UNR-Fs-uRh" firstAttribute="baseline" secondItem="CQy-NN-Hnj" secondAttribute="baseline" id="8Kn-BR-xHb"/>
-                                    <constraint firstItem="jhX-Wn-tLh" firstAttribute="baseline" secondItem="r51-4G-x4h" secondAttribute="baseline" id="99a-Ey-Zmu"/>
-                                    <constraint firstItem="jhX-Wn-tLh" firstAttribute="baseline" secondItem="Ujo-PS-Upe" secondAttribute="baseline" id="AQQ-xU-9XQ"/>
-                                    <constraint firstItem="r51-4G-x4h" firstAttribute="baseline" secondItem="UNR-Fs-uRh" secondAttribute="baseline" id="Beg-Zt-onT"/>
-                                    <constraint firstItem="UNR-Fs-uRh" firstAttribute="baseline" secondItem="jhX-Wn-tLh" secondAttribute="baseline" id="Ble-U0-hTH"/>
-                                    <constraint firstItem="UNR-Fs-uRh" firstAttribute="baseline" secondItem="CQy-NN-Hnj" secondAttribute="baseline" id="COD-Fa-isj"/>
-                                    <constraint firstItem="gkJ-bc-zBY" firstAttribute="baseline" secondItem="CQy-NN-Hnj" secondAttribute="baseline" id="CkK-1H-eNt"/>
-                                    <constraint firstItem="UNR-Fs-uRh" firstAttribute="firstBaseline" secondItem="Ujo-PS-Upe" secondAttribute="firstBaseline" id="Cqk-Ku-TM6"/>
-                                    <constraint firstItem="jhX-Wn-tLh" firstAttribute="baseline" secondItem="r51-4G-x4h" secondAttribute="baseline" id="DC0-gl-cvc"/>
-                                    <constraint firstItem="gkJ-bc-zBY" firstAttribute="baseline" secondItem="jhX-Wn-tLh" secondAttribute="baseline" id="DXr-Hx-7YF"/>
-                                    <constraint firstItem="r51-4G-x4h" firstAttribute="firstBaseline" secondItem="CQy-NN-Hnj" secondAttribute="firstBaseline" id="ElI-4j-bkm"/>
-                                    <constraint firstItem="UNR-Fs-uRh" firstAttribute="baseline" secondItem="gkJ-bc-zBY" secondAttribute="baseline" id="Ewg-6A-yvf"/>
-                                    <constraint firstItem="UNR-Fs-uRh" firstAttribute="baseline" secondItem="Ujo-PS-Upe" secondAttribute="baseline" id="Fch-6N-hXP"/>
-                                    <constraint firstItem="gkJ-bc-zBY" firstAttribute="baseline" secondItem="CQy-NN-Hnj" secondAttribute="baseline" id="GnQ-nz-Lz6"/>
-                                    <constraint firstItem="gkJ-bc-zBY" firstAttribute="firstBaseline" secondItem="Ujo-PS-Upe" secondAttribute="firstBaseline" id="HQb-3k-BQn"/>
-                                    <constraint firstItem="UNR-Fs-uRh" firstAttribute="firstBaseline" secondItem="gkJ-bc-zBY" secondAttribute="firstBaseline" id="HdR-N5-TVS"/>
-                                    <constraint firstItem="UNR-Fs-uRh" firstAttribute="firstBaseline" secondItem="gkJ-bc-zBY" secondAttribute="firstBaseline" id="Hzc-vr-BRT"/>
-                                    <constraint firstItem="jhX-Wn-tLh" firstAttribute="firstBaseline" secondItem="CQy-NN-Hnj" secondAttribute="firstBaseline" id="I3t-Iq-mt8"/>
-                                    <constraint firstItem="gkJ-bc-zBY" firstAttribute="baseline" secondItem="jhX-Wn-tLh" secondAttribute="baseline" id="IUE-wA-9W1"/>
-                                    <constraint firstItem="CQy-NN-Hnj" firstAttribute="baseline" secondItem="r51-4G-x4h" secondAttribute="baseline" id="Jlg-Nd-bJ5"/>
-                                    <constraint firstItem="UNR-Fs-uRh" firstAttribute="firstBaseline" secondItem="r51-4G-x4h" secondAttribute="firstBaseline" id="K9W-sM-9PW"/>
-                                    <constraint firstItem="gkJ-bc-zBY" firstAttribute="firstBaseline" secondItem="jhX-Wn-tLh" secondAttribute="firstBaseline" id="Kne-j4-pmj"/>
-                                    <constraint firstItem="CQy-NN-Hnj" firstAttribute="firstBaseline" secondItem="r51-4G-x4h" secondAttribute="firstBaseline" id="LVZ-AO-JAP"/>
-                                    <constraint firstItem="UNR-Fs-uRh" firstAttribute="baseline" secondItem="Ujo-PS-Upe" secondAttribute="baseline" id="NeZ-9f-TII"/>
-                                    <constraint firstItem="Ujo-PS-Upe" firstAttribute="firstBaseline" secondItem="UNR-Fs-uRh" secondAttribute="firstBaseline" id="PCB-l8-slj"/>
-                                    <constraint firstItem="Ujo-PS-Upe" firstAttribute="firstBaseline" secondItem="jhX-Wn-tLh" secondAttribute="firstBaseline" id="R4P-q5-L6E"/>
-                                    <constraint firstItem="r51-4G-x4h" firstAttribute="firstBaseline" secondItem="jhX-Wn-tLh" secondAttribute="firstBaseline" id="REV-OO-pIS"/>
-                                    <constraint firstItem="gkJ-bc-zBY" firstAttribute="firstBaseline" secondItem="CQy-NN-Hnj" secondAttribute="firstBaseline" id="RHd-8r-rkO"/>
-                                    <constraint firstItem="jhX-Wn-tLh" firstAttribute="baseline" secondItem="UNR-Fs-uRh" secondAttribute="baseline" id="Sf0-ou-31T"/>
-                                    <constraint firstItem="gkJ-bc-zBY" firstAttribute="baseline" secondItem="jhX-Wn-tLh" secondAttribute="baseline" id="Sm4-0h-qok"/>
-                                    <constraint firstItem="jhX-Wn-tLh" firstAttribute="baseline" secondItem="CQy-NN-Hnj" secondAttribute="baseline" id="Sme-ie-Jqu"/>
-                                    <constraint firstItem="jhX-Wn-tLh" firstAttribute="firstBaseline" secondItem="r51-4G-x4h" secondAttribute="firstBaseline" id="Sos-cX-Vs9"/>
-                                    <constraint firstItem="CQy-NN-Hnj" firstAttribute="baseline" secondItem="UNR-Fs-uRh" secondAttribute="baseline" id="TCS-r6-Q8K"/>
-                                    <constraint firstItem="CQy-NN-Hnj" firstAttribute="firstBaseline" secondItem="UNR-Fs-uRh" secondAttribute="firstBaseline" id="TJA-P4-D9q"/>
-                                    <constraint firstItem="jhX-Wn-tLh" firstAttribute="baseline" secondItem="Ujo-PS-Upe" secondAttribute="baseline" id="U8x-5y-9CS"/>
-                                    <constraint firstItem="jhX-Wn-tLh" firstAttribute="baseline" secondItem="CQy-NN-Hnj" secondAttribute="baseline" id="UYE-iI-1Ym"/>
-                                    <constraint firstItem="gkJ-bc-zBY" firstAttribute="firstBaseline" secondItem="r51-4G-x4h" secondAttribute="firstBaseline" id="Vrr-ij-op7"/>
-                                    <constraint firstItem="CQy-NN-Hnj" firstAttribute="firstBaseline" secondItem="r51-4G-x4h" secondAttribute="firstBaseline" id="VsL-nc-mzv"/>
-                                    <constraint firstItem="r51-4G-x4h" firstAttribute="firstBaseline" secondItem="gkJ-bc-zBY" secondAttribute="firstBaseline" id="WIY-fS-BsD"/>
-                                    <constraint firstItem="gkJ-bc-zBY" firstAttribute="baseline" secondItem="Ujo-PS-Upe" secondAttribute="baseline" id="WdX-p4-dTS"/>
-                                    <constraint firstItem="CQy-NN-Hnj" firstAttribute="baseline" secondItem="Ujo-PS-Upe" secondAttribute="baseline" id="WhU-ta-nxf"/>
-                                    <constraint firstItem="r51-4G-x4h" firstAttribute="baseline" secondItem="gkJ-bc-zBY" secondAttribute="baseline" id="YNA-7d-f3N"/>
-                                    <constraint firstItem="CQy-NN-Hnj" firstAttribute="baseline" secondItem="r51-4G-x4h" secondAttribute="baseline" id="YZI-g7-rkJ"/>
-                                    <constraint firstItem="r51-4G-x4h" firstAttribute="firstBaseline" secondItem="jhX-Wn-tLh" secondAttribute="firstBaseline" id="Yjd-iH-dXT"/>
-                                    <constraint firstItem="r51-4G-x4h" firstAttribute="baseline" secondItem="Ujo-PS-Upe" secondAttribute="baseline" id="Yjw-ES-lNF"/>
-                                    <constraint firstItem="CQy-NN-Hnj" firstAttribute="firstBaseline" secondItem="jhX-Wn-tLh" secondAttribute="firstBaseline" id="ZDg-3e-QSN"/>
-                                    <constraint firstItem="jhX-Wn-tLh" firstAttribute="firstBaseline" secondItem="CQy-NN-Hnj" secondAttribute="firstBaseline" id="ZSa-ay-VFL"/>
-                                    <constraint firstItem="r51-4G-x4h" firstAttribute="firstBaseline" secondItem="jhX-Wn-tLh" secondAttribute="firstBaseline" id="a3u-av-2iM"/>
-                                    <constraint firstItem="UNR-Fs-uRh" firstAttribute="baseline" secondItem="r51-4G-x4h" secondAttribute="baseline" id="aNj-hG-12f"/>
-                                    <constraint firstItem="Ujo-PS-Upe" firstAttribute="firstBaseline" secondItem="CQy-NN-Hnj" secondAttribute="firstBaseline" id="blh-TW-Ffj"/>
-                                    <constraint firstItem="jhX-Wn-tLh" firstAttribute="firstBaseline" secondItem="CQy-NN-Hnj" secondAttribute="firstBaseline" id="cO5-Ro-mIl"/>
-                                    <constraint firstItem="CQy-NN-Hnj" firstAttribute="firstBaseline" secondItem="Ujo-PS-Upe" secondAttribute="firstBaseline" id="cZJ-D0-Tz3"/>
-                                    <constraint firstItem="CQy-NN-Hnj" firstAttribute="firstBaseline" secondItem="gkJ-bc-zBY" secondAttribute="firstBaseline" id="cgX-W8-LM2"/>
-                                    <constraint firstItem="UNR-Fs-uRh" firstAttribute="firstBaseline" secondItem="r51-4G-x4h" secondAttribute="firstBaseline" id="cgv-Ky-842"/>
-                                    <constraint firstItem="Ujo-PS-Upe" firstAttribute="firstBaseline" secondItem="gkJ-bc-zBY" secondAttribute="firstBaseline" id="dBL-w4-ywH"/>
-                                    <constraint firstItem="CQy-NN-Hnj" firstAttribute="baseline" secondItem="jhX-Wn-tLh" secondAttribute="baseline" id="dWu-fq-ihf"/>
-                                    <constraint firstItem="r51-4G-x4h" firstAttribute="firstBaseline" secondItem="gkJ-bc-zBY" secondAttribute="firstBaseline" id="dnf-vr-d6l"/>
-                                    <constraint firstItem="jhX-Wn-tLh" firstAttribute="firstBaseline" secondItem="Ujo-PS-Upe" secondAttribute="firstBaseline" id="eG0-h2-7FC"/>
-                                    <constraint firstItem="Ujo-PS-Upe" firstAttribute="firstBaseline" secondItem="r51-4G-x4h" secondAttribute="firstBaseline" id="eN7-Ct-pbI"/>
-                                    <constraint firstItem="UNR-Fs-uRh" firstAttribute="firstBaseline" secondItem="jhX-Wn-tLh" secondAttribute="firstBaseline" id="eTp-bT-Drc"/>
-                                    <constraint firstItem="UNR-Fs-uRh" firstAttribute="baseline" secondItem="Ujo-PS-Upe" secondAttribute="baseline" id="eY0-qT-kAk"/>
-                                    <constraint firstItem="jhX-Wn-tLh" firstAttribute="baseline" secondItem="gkJ-bc-zBY" secondAttribute="baseline" id="ezj-k9-vw8"/>
-                                    <constraint firstItem="CQy-NN-Hnj" firstAttribute="baseline" secondItem="r51-4G-x4h" secondAttribute="baseline" id="fKK-EQ-a07"/>
-                                    <constraint firstItem="UNR-Fs-uRh" firstAttribute="firstBaseline" secondItem="Ujo-PS-Upe" secondAttribute="firstBaseline" id="gbu-Tm-aMm"/>
-                                    <constraint firstItem="CQy-NN-Hnj" firstAttribute="baseline" secondItem="Ujo-PS-Upe" secondAttribute="baseline" id="gyi-rp-kes"/>
-                                    <constraint firstItem="CQy-NN-Hnj" firstAttribute="firstBaseline" secondItem="UNR-Fs-uRh" secondAttribute="firstBaseline" id="hHN-5g-7vF"/>
-                                    <constraint firstItem="r51-4G-x4h" firstAttribute="firstBaseline" secondItem="gkJ-bc-zBY" secondAttribute="firstBaseline" id="hem-vt-kM7"/>
-                                    <constraint firstItem="jhX-Wn-tLh" firstAttribute="firstBaseline" secondItem="gkJ-bc-zBY" secondAttribute="firstBaseline" id="hmL-kI-8R0"/>
-                                    <constraint firstItem="jhX-Wn-tLh" firstAttribute="baseline" secondItem="CQy-NN-Hnj" secondAttribute="baseline" id="iy1-X1-9jg"/>
-                                    <constraint firstItem="CQy-NN-Hnj" firstAttribute="baseline" secondItem="gkJ-bc-zBY" secondAttribute="baseline" id="jeY-ht-ij1"/>
-                                    <constraint firstItem="Ujo-PS-Upe" firstAttribute="firstBaseline" secondItem="jhX-Wn-tLh" secondAttribute="firstBaseline" id="jid-up-UGT"/>
-                                    <constraint firstItem="Ujo-PS-Upe" firstAttribute="baseline" secondItem="r51-4G-x4h" secondAttribute="baseline" id="kOl-F1-aSV"/>
-                                    <constraint firstItem="CQy-NN-Hnj" firstAttribute="baseline" secondItem="gkJ-bc-zBY" secondAttribute="baseline" id="kT9-qd-MsJ"/>
-                                    <constraint firstItem="CQy-NN-Hnj" firstAttribute="firstBaseline" secondItem="gkJ-bc-zBY" secondAttribute="firstBaseline" id="klu-9x-Cv8"/>
-                                    <constraint firstItem="UNR-Fs-uRh" firstAttribute="baseline" secondItem="CQy-NN-Hnj" secondAttribute="baseline" id="lKc-0O-pvg"/>
-                                    <constraint firstItem="CQy-NN-Hnj" firstAttribute="baseline" secondItem="r51-4G-x4h" secondAttribute="baseline" id="laN-AE-BXm"/>
-                                    <constraint firstItem="jhX-Wn-tLh" firstAttribute="baseline" secondItem="UNR-Fs-uRh" secondAttribute="baseline" id="lct-x2-uTF"/>
-                                    <constraint firstItem="UNR-Fs-uRh" firstAttribute="baseline" secondItem="r51-4G-x4h" secondAttribute="baseline" id="loA-42-KcJ"/>
-                                    <constraint firstItem="gkJ-bc-zBY" firstAttribute="firstBaseline" secondItem="jhX-Wn-tLh" secondAttribute="firstBaseline" id="nce-mR-9G1"/>
-                                    <constraint firstItem="UNR-Fs-uRh" firstAttribute="baseline" secondItem="Ujo-PS-Upe" secondAttribute="baseline" id="o5q-yU-jYF"/>
-                                    <constraint firstItem="gkJ-bc-zBY" firstAttribute="baseline" secondItem="r51-4G-x4h" secondAttribute="baseline" id="oNM-aL-LV4"/>
-                                    <constraint firstItem="r51-4G-x4h" firstAttribute="firstBaseline" secondItem="Ujo-PS-Upe" secondAttribute="firstBaseline" id="orv-8V-dES"/>
-                                    <constraint firstItem="Ujo-PS-Upe" firstAttribute="baseline" secondItem="r51-4G-x4h" secondAttribute="baseline" id="pTT-Zz-KY5"/>
-                                    <constraint firstItem="UNR-Fs-uRh" firstAttribute="firstBaseline" secondItem="CQy-NN-Hnj" secondAttribute="firstBaseline" id="pkM-6Q-Mi6"/>
-                                    <constraint firstItem="UNR-Fs-uRh" firstAttribute="baseline" secondItem="gkJ-bc-zBY" secondAttribute="baseline" id="pvj-TX-4mK"/>
-                                    <constraint firstItem="CQy-NN-Hnj" firstAttribute="firstBaseline" secondItem="gkJ-bc-zBY" secondAttribute="firstBaseline" id="q4X-s8-kqr"/>
-                                    <constraint firstItem="Ujo-PS-Upe" firstAttribute="firstBaseline" secondItem="CQy-NN-Hnj" secondAttribute="firstBaseline" id="r5K-Sb-2cV"/>
-                                    <constraint firstItem="gkJ-bc-zBY" firstAttribute="firstBaseline" secondItem="Ujo-PS-Upe" secondAttribute="firstBaseline" id="rPK-ia-Cv9"/>
-                                    <constraint firstItem="Ujo-PS-Upe" firstAttribute="baseline" secondItem="gkJ-bc-zBY" secondAttribute="baseline" id="rfW-cD-oIY"/>
-                                    <constraint firstItem="r51-4G-x4h" firstAttribute="baseline" secondItem="UNR-Fs-uRh" secondAttribute="baseline" id="rlE-4L-sQx"/>
-                                    <constraint firstItem="jhX-Wn-tLh" firstAttribute="firstBaseline" secondItem="gkJ-bc-zBY" secondAttribute="firstBaseline" id="s2W-b4-KbV"/>
-                                    <constraint firstItem="UNR-Fs-uRh" firstAttribute="firstBaseline" secondItem="jhX-Wn-tLh" secondAttribute="firstBaseline" id="slm-XZ-556"/>
-                                    <constraint firstItem="UNR-Fs-uRh" firstAttribute="firstBaseline" secondItem="CQy-NN-Hnj" secondAttribute="firstBaseline" id="tGm-aM-HeT"/>
-                                    <constraint firstItem="UNR-Fs-uRh" firstAttribute="baseline" secondItem="gkJ-bc-zBY" secondAttribute="baseline" id="tGs-T2-2jC"/>
-                                    <constraint firstItem="Ujo-PS-Upe" firstAttribute="baseline" secondItem="CQy-NN-Hnj" secondAttribute="baseline" id="uKr-cl-zBT"/>
                                     <constraint firstAttribute="width" secondItem="NjS-Up-ebO" secondAttribute="height" multiplier="6:1" id="uLG-0a-aIr"/>
-                                    <constraint firstItem="Ujo-PS-Upe" firstAttribute="firstBaseline" secondItem="CQy-NN-Hnj" secondAttribute="firstBaseline" id="uee-HI-8dW"/>
-                                    <constraint firstItem="UNR-Fs-uRh" firstAttribute="firstBaseline" secondItem="gkJ-bc-zBY" secondAttribute="firstBaseline" id="uxY-Mn-dfZ"/>
-                                    <constraint firstItem="jhX-Wn-tLh" firstAttribute="firstBaseline" secondItem="UNR-Fs-uRh" secondAttribute="firstBaseline" id="v8S-Bo-y4D"/>
-                                    <constraint firstItem="gkJ-bc-zBY" firstAttribute="firstBaseline" secondItem="Ujo-PS-Upe" secondAttribute="firstBaseline" id="vPh-rZ-MiN"/>
-                                    <constraint firstItem="UNR-Fs-uRh" firstAttribute="firstBaseline" secondItem="jhX-Wn-tLh" secondAttribute="firstBaseline" id="vrV-K0-Ru4"/>
-                                    <constraint firstItem="gkJ-bc-zBY" firstAttribute="firstBaseline" secondItem="UNR-Fs-uRh" secondAttribute="firstBaseline" id="w3b-vC-I04"/>
-                                    <constraint firstItem="Ujo-PS-Upe" firstAttribute="baseline" secondItem="gkJ-bc-zBY" secondAttribute="baseline" id="wOE-Ya-2VA"/>
-                                    <constraint firstItem="UNR-Fs-uRh" firstAttribute="firstBaseline" secondItem="r51-4G-x4h" secondAttribute="firstBaseline" id="xTc-nr-IZL"/>
-                                    <constraint firstItem="gkJ-bc-zBY" firstAttribute="baseline" secondItem="Ujo-PS-Upe" secondAttribute="baseline" id="xYN-SH-pID"/>
-                                    <constraint firstItem="r51-4G-x4h" firstAttribute="baseline" secondItem="jhX-Wn-tLh" secondAttribute="baseline" id="yLx-1m-gc1"/>
-                                    <constraint firstItem="Ujo-PS-Upe" firstAttribute="baseline" secondItem="CQy-NN-Hnj" secondAttribute="baseline" id="yOc-gU-GWW"/>
-                                    <constraint firstItem="r51-4G-x4h" firstAttribute="baseline" secondItem="gkJ-bc-zBY" secondAttribute="baseline" id="ysA-4J-j0P"/>
-                                    <constraint firstItem="r51-4G-x4h" firstAttribute="firstBaseline" secondItem="Ujo-PS-Upe" secondAttribute="firstBaseline" id="z1F-wl-9YX"/>
-                                    <constraint firstItem="UNR-Fs-uRh" firstAttribute="baseline" secondItem="gkJ-bc-zBY" secondAttribute="baseline" id="zFn-pe-ZXB"/>
-                                    <constraint firstItem="Ujo-PS-Upe" firstAttribute="baseline" secondItem="r51-4G-x4h" secondAttribute="baseline" id="zQA-YR-22R"/>
-                                    <constraint firstItem="jhX-Wn-tLh" firstAttribute="baseline" secondItem="r51-4G-x4h" secondAttribute="baseline" id="zkR-SS-DeY"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -471,7 +352,7 @@ Try to guess a sequence as fast as you can. Good luck!</string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Excellent!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hWX-vo-Ya2">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Отлично!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hWX-vo-Ya2">
                                 <rect key="frame" x="12" y="49" width="297" height="119"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="45"/>
@@ -517,19 +398,19 @@ Try to guess a sequence as fast as you can. Good luck!</string>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e5b-jp-MJB">
-                                <rect key="frame" x="16" y="517" width="126" height="31"/>
+                                <rect key="frame" x="16" y="517" width="140" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Duj-rX-mNc">
-                                        <rect key="frame" x="77" y="0.0" width="49" height="31"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <rect key="frame" x="91" y="0.0" width="49" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <connections>
                                             <action selector="hintSwitched:" destination="ngm-Zp-cQR" eventType="valueChanged" id="OUe-7l-ztM"/>
                                         </connections>
                                     </switch>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hints" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sjg-Ec-KFT">
-                                        <rect key="frame" x="0.0" y="0.0" width="69" height="31"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Подсказки" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sjg-Ec-KFT">
+                                        <rect key="frame" x="0.0" y="0.0" width="87" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -575,7 +456,7 @@ Try to guess a sequence as fast as you can. Good luck!</string>
                                 <rect key="frame" x="90" y="155" width="140" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <state key="normal" title="Resume">
+                                <state key="normal" title="Продолжить">
                                     <color key="titleColor" red="0.23921568630000001" green="0.26274509800000001" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -586,7 +467,7 @@ Try to guess a sequence as fast as you can. Good luck!</string>
                                 <rect key="frame" x="90" y="254" width="140" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <state key="normal" title="Play again">
+                                <state key="normal" title="Играть заново">
                                     <color key="titleColor" red="0.23921568630000001" green="0.26274509800000001" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -597,7 +478,7 @@ Try to guess a sequence as fast as you can. Good luck!</string>
                                 <rect key="frame" x="90" y="345" width="140" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <state key="normal" title="Main menu">
+                                <state key="normal" title="Главное меню">
                                     <color key="titleColor" red="0.23921568630000001" green="0.26274509800000001" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -611,7 +492,7 @@ Try to guess a sequence as fast as you can. Good luck!</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dlx-Dp-kic" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1903" y="-546"/>
+            <point key="canvasLocation" x="1860" y="-563"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="2s6-7Y-Df5">
@@ -649,6 +530,6 @@ Try to guess a sequence as fast as you can. Good luck!</string>
         <image name="yellowButton640" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Jk1-6G-Qxx"/>
+        <segue reference="VXQ-9H-Y8h"/>
     </inferredMetricsTieBreakers>
 </document>
