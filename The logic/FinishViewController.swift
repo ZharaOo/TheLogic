@@ -78,6 +78,7 @@ class FinishViewController: UIViewController, GADInterstitialDelegate {
             if #available(iOS 10.3, *) {
                 if !rateShown {
                     SKStoreReviewController.requestReview()
+                    rateShown = true
                 }
             }
             self.hintSwitch.isOn = ud.bool(forKey: Constants.kHint)

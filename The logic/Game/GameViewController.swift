@@ -112,7 +112,7 @@ class GameViewController: UIViewController, LogicGameDelegate, RowViewDelegate, 
         
         switch rows.count {
         case 1:
-            rulesText = NSLocalizedString("Отгадайте цвета в последовательности ↑. \n\nВыставите последовательность в нужной последовательности. ↓", comment: "")
+            rulesText = NSLocalizedString("Отгадайте цвета в последовательности ↑. \n\nВыставите фишки в нужной последовательности. ↓", comment: "")
         case 2:
             rulesText = NSLocalizedString("Фишки справа вверху показывают правильность ответа. Белая фишка — вы угадали цвет, черная — вы угадали цвет и место, серая — вы ничего не угадали.", comment: "")
         case 3:

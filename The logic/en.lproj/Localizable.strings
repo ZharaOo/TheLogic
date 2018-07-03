@@ -6,7 +6,7 @@
   Copyright © 2018 Ivan Babkin. All rights reserved.
 */
 
-"Отгадайте цвета в последовательности ↑. \n\nВыставите последовательность в нужной последовательности. ↓" = "Guess the colors in the sequence ↑. \n\nSelect the colors in the proper order ↓.";
+"Отгадайте цвета в последовательности ↑. \n\nВыставите фишки в нужной последовательности. ↓" = "Guess the colors in the sequence ↑. \n\nSelect the colors in the proper order ↓.";
 "Фишки справа вверху показывают правильность ответа. Белая фишка — вы угадали цвет, черная — вы угадали цвет и место, серая — вы ничего не угадали." = "Upper right chips show accuracy of your answer. White dot — you guessed the color, black — you guessed the color and the place, gray — you guessed nоthing.";
 "Например, в первом ответе" = "For instance, in the first answer";
 "В предыдущем ответе" = "In previous answer";
