@@ -6,17 +6,21 @@
   Copyright © 2018 Ivan Babkin. All rights reserved.
 */
 
-"Игра загадала последовательность из четырех фишек. Нажимайте на кнопки внизу, чтобы выставить последовательность." = "The game set a sequence composed of four chips. Press the buttons below to put your version of sequence.";
-"Фишки справа вверху показывают правильность ответа. Черная фишка означает, что угадан какой-то цвет и он стоит на своем месте. Белая фишка означает, что был угадан цвет, но он стоит не на своем месте." = "Upper right chips show accuracy of your answer. Black chip shows that color was guessed and it on the right place. White chip shows that color was guessed and it’s place is wrong.";
+"Отгадайте цвета в последовательности ↑. \n\nВыставите последовательность в нужной последовательности. ↓" = "Guess the colors in the sequence ↑. \n\nSelect the colors in the proper order ↓.";
+"Фишки справа вверху показывают правильность ответа. Белая фишка — вы угадали цвет, черная — вы угадали цвет и место, серая — вы ничего не угадали." = "Upper right chips show accuracy of your answer. White dot — you guessed the color, black — you guessed the color and the place, gray — you guessed nоthing.";
 "Например, в первом ответе" = "For instance, in the first answer";
 "В предыдущем ответе" = "In previous answer";
-"%@ вы правильно угадали %ld цветов. %@%@" = "%@ you guessed %ld colors. %@%@";
-"%@ вы не угадали ни одного цвета." = "%@ you didn’t guess no one color.";
-"%d из них стоят на своем месте." = "%d chips are on the right place.";
-"При этом все цвета стоят не на своем месте." = "Wherein all chips with correct color are on the wrong place.";
-"Для %d цветов место неверно." = "For %d chips with right color place is wrong.";
+"%@ вы правильно угадали %ld %@. %@%@" = "%@ you guessed %ld %@. %@%@";
+"%@ вы не угадали ни одного цвета." = "%@ you didn’t guess no one color. ";
+"%d из них стоят на своем месте." = "%d chips are on the right place. ";
+"При этом все цвета стоят не на своем месте." = "Wherein all chips are on the wrong place. ";
+"Для %d %@ место неверно." = "For %d %@ place is wrong. ";
 "Ходы: %ld" = "Moves: %ld";
 "Ходы: %ld\nЛучшие: %ld" = "Moves: %ld\nBest: %ld";
 "Время: %@\nЛучшее: %@" = "Time: %@\nBest: %@";
 "Подсказки" = "Prompting";
 "Хотите ли вы оставить подсказки в игре?" = "Do you want to have promptings in a game?";
+"цветa" = "color";
+"цвет" = "color";
+"цвета" = "colors";
+"цветов" = "colors";

@@ -25,6 +25,7 @@
 		DF84A72E20D10F6000867A77 /* PauseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF84A72D20D10F6000867A77 /* PauseViewController.swift */; };
 		DF84A73020D1114700867A77 /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF84A72F20D1114700867A77 /* RulesViewController.swift */; };
 		DFB7603820E6BB9700AF2EE7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DFB7603A20E6BB9700AF2EE7 /* Localizable.strings */; };
+		DFBA006320EBC8C700DCDF98 /* Google.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBA006220EBC8C700DCDF98 /* Google.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		DFB7603B20E6BB9C00AF2EE7 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DFB7604520E6CACB00AF2EE7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DFB7604820E6D2E900AF2EE7 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ru; path = ru.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DFBA006220EBC8C700DCDF98 /* Google.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Google.swift; sourceTree = "<group>"; };
 		F436A579A26F8757362B7D34 /* Pods-The logic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The logic.release.xcconfig"; path = "Pods/Target Support Files/Pods-The logic/Pods-The logic.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -100,6 +102,7 @@
 			children = (
 				DF5A464F20CF209A00C85462 /* AppDelegate.swift */,
 				DF5A466120CF278800C85462 /* Constants.swift */,
+				DFBA006220EBC8C700DCDF98 /* Google.swift */,
 				DF5A465120CF209A00C85462 /* StartViewController.swift */,
 				DF5A466F20CFEC4500C85462 /* Game */,
 				DF84A72920D068AB00867A77 /* FinishViewController.swift */,
@@ -236,6 +239,7 @@
 				DF5A465020CF209A00C85462 /* AppDelegate.swift in Sources */,
 				DF84A72A20D068AB00867A77 /* FinishViewController.swift in Sources */,
 				DF5A466A20CFD4C000C85462 /* RowView.swift in Sources */,
+				DFBA006320EBC8C700DCDF98 /* Google.swift in Sources */,
 				DF5A466820CFBA5100C85462 /* ChipClasses.swift in Sources */,
 				DF5A466E20CFEC3A00C85462 /* GameViewController.swift in Sources */,
 				DF5A466620CF2C2B00C85462 /* Time.swift in Sources */,

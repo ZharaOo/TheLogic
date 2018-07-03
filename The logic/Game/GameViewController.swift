@@ -112,9 +112,9 @@ class GameViewController: UIViewController, LogicGameDelegate, RowViewDelegate, 
         
         switch rows.count {
         case 1:
-            rulesText = NSLocalizedString("Игра загадала последовательность из четырех фишек. Нажимайте на кнопки внизу, чтобы выставить последовательность.", comment: "")
+            rulesText = NSLocalizedString("Отгадайте цвета в последовательности ↑. \n\nВыставите последовательность в нужной последовательности. ↓", comment: "")
         case 2:
-            rulesText = NSLocalizedString("Фишки справа вверху показывают правильность ответа. Черная фишка означает, что угадан какой-то цвет и он стоит на своем месте. Белая фишка означает, что был угадан цвет, но он стоит не на своем месте.", comment: "")
+            rulesText = NSLocalizedString("Фишки справа вверху показывают правильность ответа. Белая фишка — вы угадали цвет, черная — вы угадали цвет и место, серая — вы ничего не угадали.", comment: "")
         case 3:
             rulesText = String(format: "%@\n%@", generateAnswerString(startString:NSLocalizedString("Например, в первом ответе", comment: ""), rowIndex: 0), generateAnswerString(startString:NSLocalizedString("В предыдущем ответе", comment: ""), rowIndex: 1))
         default:
@@ -149,10 +149,12 @@ class GameViewController: UIViewController, LogicGameDelegate, RowViewDelegate, 
                 answerForWhite = NSLocalizedString("При этом все цвета стоят не на своем месте.", comment: "")
             }
             else {
-                answerForWhite = numberOfWhite > 0 ? String(format:NSLocalizedString("Для %d цветов место неверно.", comment: ""), numberOfWhite) : ""
+                let colorString = numberOfWhite == 1 ? NSLocalizedString("цветa", comment: "") : NSLocalizedString("цветов", comment: "")
+                
+                answerForWhite = numberOfWhite > 0 ? String(format:NSLocalizedString("Для %d %@ место неверно.", comment: ""), numberOfWhite, colorString) : ""
             }
-
-            return String(format:NSLocalizedString("%@ вы правильно угадали %ld цветов. %@%@", comment: ""), startString, rows[i].answer!.count, answerForBlack, answerForWhite)
+            let colorString = numberOfWhite == 1 ? NSLocalizedString("цвет", comment: "") : NSLocalizedString("цвета", comment: "")
+            return String(format:NSLocalizedString("%@ вы правильно угадали %ld %@. %@%@", comment: ""), startString, rows[i].answer!.count, colorString, answerForBlack, answerForWhite)
         }
         else {
             return String(format: NSLocalizedString("%@ вы не угадали ни одного цвета.", comment: ""), startString)

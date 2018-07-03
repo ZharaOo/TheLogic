@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        GADMobileAds.configure(withApplicationID: "ca-app-pub-8013517248040410~3812580147")
+        GADMobileAds.configure(withApplicationID: Google.appID)
         
         let nb = UINavigationBar.appearance()
         nb.setBackgroundImage(UIImage.init(), for: UIBarMetrics.default)

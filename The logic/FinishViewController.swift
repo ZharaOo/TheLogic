@@ -51,7 +51,7 @@ class FinishViewController: UIViewController, GADInterstitialDelegate {
         showScore()
         
         if UserDefaults.standard.string(forKey: Constants.kRules) != nil {
-            interstitial = createAndLoadInterstitial(id: "ca-app-pub-8013517248040410/5289313347")
+            interstitial = createAndLoadInterstitial(id: Google.adID)
         }
     }
     
