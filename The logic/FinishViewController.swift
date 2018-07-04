@@ -70,7 +70,6 @@ class FinishViewController: UIViewController, GADInterstitialDelegate {
                 else {
                     ud.set(true, forKey: Constants.kHint)
                     self.hintSwitch.isOn = true
-                    self.showHintView()
                 }
             }
         }
@@ -120,16 +119,6 @@ class FinishViewController: UIViewController, GADInterstitialDelegate {
     
     func interstitialWillDismissScreen(_ ad: GADInterstitial) {
         interstitial = nil
-    }
-
-    func showHintView() {
-        let ud = UserDefaults.standard
-        if ud.string(forKey: Constants.kRules) != nil {
-            hintView.isHidden = true
-        }
-        else {
-            hintSwitch.isOn = ud.bool(forKey: Constants.kHint)
-        }
     }
     
     func showRightSequence() {
