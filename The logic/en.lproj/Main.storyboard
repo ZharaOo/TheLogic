@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -251,7 +250,7 @@ Try to guess a sequence as fast as you can. Good luck!</string>
                                 <rect key="frame" x="10" y="498" width="300" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jhX-Wn-tLh" customClass="ChipButton" customModule="The_logic" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="50.5" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="jhX-Wn-tLh" secondAttribute="height" multiplier="1:1" id="ueG-Pg-oqg"/>
                                         </constraints>
@@ -261,7 +260,7 @@ Try to guess a sequence as fast as you can. Good luck!</string>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CQy-NN-Hnj" customClass="ChipButton" customModule="The_logic" customModuleProvider="target">
-                                        <rect key="frame" x="50" y="0.0" width="50" height="50"/>
+                                        <rect key="frame" x="50.5" y="0.0" width="49.5" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="CQy-NN-Hnj" secondAttribute="height" multiplier="1:1" id="8TD-L6-Yhg"/>
                                         </constraints>
@@ -311,129 +310,6 @@ Try to guess a sequence as fast as you can. Good luck!</string>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="r51-4G-x4h" firstAttribute="firstBaseline" secondItem="UNR-Fs-uRh" secondAttribute="firstBaseline" id="0Xy-Md-6GM"/>
-                                    <constraint firstItem="r51-4G-x4h" firstAttribute="firstBaseline" secondItem="Ujo-PS-Upe" secondAttribute="firstBaseline" id="2Na-Ot-wST"/>
-                                    <constraint firstItem="Ujo-PS-Upe" firstAttribute="firstBaseline" secondItem="UNR-Fs-uRh" secondAttribute="firstBaseline" id="35K-CH-ruC"/>
-                                    <constraint firstItem="jhX-Wn-tLh" firstAttribute="baseline" secondItem="UNR-Fs-uRh" secondAttribute="baseline" id="3Sa-ye-o7l"/>
-                                    <constraint firstItem="CQy-NN-Hnj" firstAttribute="firstBaseline" secondItem="r51-4G-x4h" secondAttribute="firstBaseline" id="3cb-J3-9q7"/>
-                                    <constraint firstItem="r51-4G-x4h" firstAttribute="baseline" secondItem="gkJ-bc-zBY" secondAttribute="baseline" id="4OF-Mt-KtQ"/>
-                                    <constraint firstItem="Ujo-PS-Upe" firstAttribute="baseline" secondItem="jhX-Wn-tLh" secondAttribute="baseline" id="6Mu-HN-pEq"/>
-                                    <constraint firstItem="Ujo-PS-Upe" firstAttribute="baseline" secondItem="jhX-Wn-tLh" secondAttribute="baseline" id="6NB-Dy-wEr"/>
-                                    <constraint firstItem="Ujo-PS-Upe" firstAttribute="firstBaseline" secondItem="jhX-Wn-tLh" secondAttribute="firstBaseline" id="6XB-IQ-Akm"/>
-                                    <constraint firstItem="UNR-Fs-uRh" firstAttribute="baseline" secondItem="CQy-NN-Hnj" secondAttribute="baseline" id="8Kn-BR-xHb"/>
-                                    <constraint firstItem="jhX-Wn-tLh" firstAttribute="baseline" secondItem="r51-4G-x4h" secondAttribute="baseline" id="99a-Ey-Zmu"/>
-                                    <constraint firstItem="jhX-Wn-tLh" firstAttribute="baseline" secondItem="Ujo-PS-Upe" secondAttribute="baseline" id="AQQ-xU-9XQ"/>
-                                    <constraint firstItem="r51-4G-x4h" firstAttribute="baseline" secondItem="UNR-Fs-uRh" secondAttribute="baseline" id="Beg-Zt-onT"/>
-                                    <constraint firstItem="UNR-Fs-uRh" firstAttribute="baseline" secondItem="jhX-Wn-tLh" secondAttribute="baseline" id="Ble-U0-hTH"/>
-                                    <constraint firstItem="UNR-Fs-uRh" firstAttribute="baseline" secondItem="CQy-NN-Hnj" secondAttribute="baseline" id="COD-Fa-isj"/>
-                                    <constraint firstItem="gkJ-bc-zBY" firstAttribute="baseline" secondItem="CQy-NN-Hnj" secondAttribute="baseline" id="CkK-1H-eNt"/>
-                                    <constraint firstItem="UNR-Fs-uRh" firstAttribute="firstBaseline" secondItem="Ujo-PS-Upe" secondAttribute="firstBaseline" id="Cqk-Ku-TM6"/>
-                                    <constraint firstItem="jhX-Wn-tLh" firstAttribute="baseline" secondItem="r51-4G-x4h" secondAttribute="baseline" id="DC0-gl-cvc"/>
-                                    <constraint firstItem="gkJ-bc-zBY" firstAttribute="baseline" secondItem="jhX-Wn-tLh" secondAttribute="baseline" id="DXr-Hx-7YF"/>
-                                    <constraint firstItem="r51-4G-x4h" firstAttribute="firstBaseline" secondItem="CQy-NN-Hnj" secondAttribute="firstBaseline" id="ElI-4j-bkm"/>
-                                    <constraint firstItem="UNR-Fs-uRh" firstAttribute="baseline" secondItem="gkJ-bc-zBY" secondAttribute="baseline" id="Ewg-6A-yvf"/>
-                                    <constraint firstItem="UNR-Fs-uRh" firstAttribute="baseline" secondItem="Ujo-PS-Upe" secondAttribute="baseline" id="Fch-6N-hXP"/>
-                                    <constraint firstItem="gkJ-bc-zBY" firstAttribute="baseline" secondItem="CQy-NN-Hnj" secondAttribute="baseline" id="GnQ-nz-Lz6"/>
-                                    <constraint firstItem="gkJ-bc-zBY" firstAttribute="firstBaseline" secondItem="Ujo-PS-Upe" secondAttribute="firstBaseline" id="HQb-3k-BQn"/>
-                                    <constraint firstItem="UNR-Fs-uRh" firstAttribute="firstBaseline" secondItem="gkJ-bc-zBY" secondAttribute="firstBaseline" id="HdR-N5-TVS"/>
-                                    <constraint firstItem="UNR-Fs-uRh" firstAttribute="firstBaseline" secondItem="gkJ-bc-zBY" secondAttribute="firstBaseline" id="Hzc-vr-BRT"/>
-                                    <constraint firstItem="jhX-Wn-tLh" firstAttribute="firstBaseline" secondItem="CQy-NN-Hnj" secondAttribute="firstBaseline" id="I3t-Iq-mt8"/>
-                                    <constraint firstItem="gkJ-bc-zBY" firstAttribute="baseline" secondItem="jhX-Wn-tLh" secondAttribute="baseline" id="IUE-wA-9W1"/>
-                                    <constraint firstItem="CQy-NN-Hnj" firstAttribute="baseline" secondItem="r51-4G-x4h" secondAttribute="baseline" id="Jlg-Nd-bJ5"/>
-                                    <constraint firstItem="UNR-Fs-uRh" firstAttribute="firstBaseline" secondItem="r51-4G-x4h" secondAttribute="firstBaseline" id="K9W-sM-9PW"/>
-                                    <constraint firstItem="gkJ-bc-zBY" firstAttribute="firstBaseline" secondItem="jhX-Wn-tLh" secondAttribute="firstBaseline" id="Kne-j4-pmj"/>
-                                    <constraint firstItem="CQy-NN-Hnj" firstAttribute="firstBaseline" secondItem="r51-4G-x4h" secondAttribute="firstBaseline" id="LVZ-AO-JAP"/>
-                                    <constraint firstItem="UNR-Fs-uRh" firstAttribute="baseline" secondItem="Ujo-PS-Upe" secondAttribute="baseline" id="NeZ-9f-TII"/>
-                                    <constraint firstItem="Ujo-PS-Upe" firstAttribute="firstBaseline" secondItem="UNR-Fs-uRh" secondAttribute="firstBaseline" id="PCB-l8-slj"/>
-                                    <constraint firstItem="Ujo-PS-Upe" firstAttribute="firstBaseline" secondItem="jhX-Wn-tLh" secondAttribute="firstBaseline" id="R4P-q5-L6E"/>
-                                    <constraint firstItem="r51-4G-x4h" firstAttribute="firstBaseline" secondItem="jhX-Wn-tLh" secondAttribute="firstBaseline" id="REV-OO-pIS"/>
-                                    <constraint firstItem="gkJ-bc-zBY" firstAttribute="firstBaseline" secondItem="CQy-NN-Hnj" secondAttribute="firstBaseline" id="RHd-8r-rkO"/>
-                                    <constraint firstItem="jhX-Wn-tLh" firstAttribute="baseline" secondItem="UNR-Fs-uRh" secondAttribute="baseline" id="Sf0-ou-31T"/>
-                                    <constraint firstItem="gkJ-bc-zBY" firstAttribute="baseline" secondItem="jhX-Wn-tLh" secondAttribute="baseline" id="Sm4-0h-qok"/>
-                                    <constraint firstItem="jhX-Wn-tLh" firstAttribute="baseline" secondItem="CQy-NN-Hnj" secondAttribute="baseline" id="Sme-ie-Jqu"/>
-                                    <constraint firstItem="jhX-Wn-tLh" firstAttribute="firstBaseline" secondItem="r51-4G-x4h" secondAttribute="firstBaseline" id="Sos-cX-Vs9"/>
-                                    <constraint firstItem="CQy-NN-Hnj" firstAttribute="baseline" secondItem="UNR-Fs-uRh" secondAttribute="baseline" id="TCS-r6-Q8K"/>
-                                    <constraint firstItem="CQy-NN-Hnj" firstAttribute="firstBaseline" secondItem="UNR-Fs-uRh" secondAttribute="firstBaseline" id="TJA-P4-D9q"/>
-                                    <constraint firstItem="jhX-Wn-tLh" firstAttribute="baseline" secondItem="Ujo-PS-Upe" secondAttribute="baseline" id="U8x-5y-9CS"/>
-                                    <constraint firstItem="jhX-Wn-tLh" firstAttribute="baseline" secondItem="CQy-NN-Hnj" secondAttribute="baseline" id="UYE-iI-1Ym"/>
-                                    <constraint firstItem="gkJ-bc-zBY" firstAttribute="firstBaseline" secondItem="r51-4G-x4h" secondAttribute="firstBaseline" id="Vrr-ij-op7"/>
-                                    <constraint firstItem="CQy-NN-Hnj" firstAttribute="firstBaseline" secondItem="r51-4G-x4h" secondAttribute="firstBaseline" id="VsL-nc-mzv"/>
-                                    <constraint firstItem="r51-4G-x4h" firstAttribute="firstBaseline" secondItem="gkJ-bc-zBY" secondAttribute="firstBaseline" id="WIY-fS-BsD"/>
-                                    <constraint firstItem="gkJ-bc-zBY" firstAttribute="baseline" secondItem="Ujo-PS-Upe" secondAttribute="baseline" id="WdX-p4-dTS"/>
-                                    <constraint firstItem="CQy-NN-Hnj" firstAttribute="baseline" secondItem="Ujo-PS-Upe" secondAttribute="baseline" id="WhU-ta-nxf"/>
-                                    <constraint firstItem="r51-4G-x4h" firstAttribute="baseline" secondItem="gkJ-bc-zBY" secondAttribute="baseline" id="YNA-7d-f3N"/>
-                                    <constraint firstItem="CQy-NN-Hnj" firstAttribute="baseline" secondItem="r51-4G-x4h" secondAttribute="baseline" id="YZI-g7-rkJ"/>
-                                    <constraint firstItem="r51-4G-x4h" firstAttribute="firstBaseline" secondItem="jhX-Wn-tLh" secondAttribute="firstBaseline" id="Yjd-iH-dXT"/>
-                                    <constraint firstItem="r51-4G-x4h" firstAttribute="baseline" secondItem="Ujo-PS-Upe" secondAttribute="baseline" id="Yjw-ES-lNF"/>
-                                    <constraint firstItem="CQy-NN-Hnj" firstAttribute="firstBaseline" secondItem="jhX-Wn-tLh" secondAttribute="firstBaseline" id="ZDg-3e-QSN"/>
-                                    <constraint firstItem="jhX-Wn-tLh" firstAttribute="firstBaseline" secondItem="CQy-NN-Hnj" secondAttribute="firstBaseline" id="ZSa-ay-VFL"/>
-                                    <constraint firstItem="r51-4G-x4h" firstAttribute="firstBaseline" secondItem="jhX-Wn-tLh" secondAttribute="firstBaseline" id="a3u-av-2iM"/>
-                                    <constraint firstItem="UNR-Fs-uRh" firstAttribute="baseline" secondItem="r51-4G-x4h" secondAttribute="baseline" id="aNj-hG-12f"/>
-                                    <constraint firstItem="Ujo-PS-Upe" firstAttribute="firstBaseline" secondItem="CQy-NN-Hnj" secondAttribute="firstBaseline" id="blh-TW-Ffj"/>
-                                    <constraint firstItem="jhX-Wn-tLh" firstAttribute="firstBaseline" secondItem="CQy-NN-Hnj" secondAttribute="firstBaseline" id="cO5-Ro-mIl"/>
-                                    <constraint firstItem="CQy-NN-Hnj" firstAttribute="firstBaseline" secondItem="Ujo-PS-Upe" secondAttribute="firstBaseline" id="cZJ-D0-Tz3"/>
-                                    <constraint firstItem="CQy-NN-Hnj" firstAttribute="firstBaseline" secondItem="gkJ-bc-zBY" secondAttribute="firstBaseline" id="cgX-W8-LM2"/>
-                                    <constraint firstItem="UNR-Fs-uRh" firstAttribute="firstBaseline" secondItem="r51-4G-x4h" secondAttribute="firstBaseline" id="cgv-Ky-842"/>
-                                    <constraint firstItem="Ujo-PS-Upe" firstAttribute="firstBaseline" secondItem="gkJ-bc-zBY" secondAttribute="firstBaseline" id="dBL-w4-ywH"/>
-                                    <constraint firstItem="CQy-NN-Hnj" firstAttribute="baseline" secondItem="jhX-Wn-tLh" secondAttribute="baseline" id="dWu-fq-ihf"/>
-                                    <constraint firstItem="r51-4G-x4h" firstAttribute="firstBaseline" secondItem="gkJ-bc-zBY" secondAttribute="firstBaseline" id="dnf-vr-d6l"/>
-                                    <constraint firstItem="jhX-Wn-tLh" firstAttribute="firstBaseline" secondItem="Ujo-PS-Upe" secondAttribute="firstBaseline" id="eG0-h2-7FC"/>
-                                    <constraint firstItem="Ujo-PS-Upe" firstAttribute="firstBaseline" secondItem="r51-4G-x4h" secondAttribute="firstBaseline" id="eN7-Ct-pbI"/>
-                                    <constraint firstItem="UNR-Fs-uRh" firstAttribute="firstBaseline" secondItem="jhX-Wn-tLh" secondAttribute="firstBaseline" id="eTp-bT-Drc"/>
-                                    <constraint firstItem="UNR-Fs-uRh" firstAttribute="baseline" secondItem="Ujo-PS-Upe" secondAttribute="baseline" id="eY0-qT-kAk"/>
-                                    <constraint firstItem="jhX-Wn-tLh" firstAttribute="baseline" secondItem="gkJ-bc-zBY" secondAttribute="baseline" id="ezj-k9-vw8"/>
-                                    <constraint firstItem="CQy-NN-Hnj" firstAttribute="baseline" secondItem="r51-4G-x4h" secondAttribute="baseline" id="fKK-EQ-a07"/>
-                                    <constraint firstItem="UNR-Fs-uRh" firstAttribute="firstBaseline" secondItem="Ujo-PS-Upe" secondAttribute="firstBaseline" id="gbu-Tm-aMm"/>
-                                    <constraint firstItem="CQy-NN-Hnj" firstAttribute="baseline" secondItem="Ujo-PS-Upe" secondAttribute="baseline" id="gyi-rp-kes"/>
-                                    <constraint firstItem="CQy-NN-Hnj" firstAttribute="firstBaseline" secondItem="UNR-Fs-uRh" secondAttribute="firstBaseline" id="hHN-5g-7vF"/>
-                                    <constraint firstItem="r51-4G-x4h" firstAttribute="firstBaseline" secondItem="gkJ-bc-zBY" secondAttribute="firstBaseline" id="hem-vt-kM7"/>
-                                    <constraint firstItem="jhX-Wn-tLh" firstAttribute="firstBaseline" secondItem="gkJ-bc-zBY" secondAttribute="firstBaseline" id="hmL-kI-8R0"/>
-                                    <constraint firstItem="jhX-Wn-tLh" firstAttribute="baseline" secondItem="CQy-NN-Hnj" secondAttribute="baseline" id="iy1-X1-9jg"/>
-                                    <constraint firstItem="CQy-NN-Hnj" firstAttribute="baseline" secondItem="gkJ-bc-zBY" secondAttribute="baseline" id="jeY-ht-ij1"/>
-                                    <constraint firstItem="Ujo-PS-Upe" firstAttribute="firstBaseline" secondItem="jhX-Wn-tLh" secondAttribute="firstBaseline" id="jid-up-UGT"/>
-                                    <constraint firstItem="Ujo-PS-Upe" firstAttribute="baseline" secondItem="r51-4G-x4h" secondAttribute="baseline" id="kOl-F1-aSV"/>
-                                    <constraint firstItem="CQy-NN-Hnj" firstAttribute="baseline" secondItem="gkJ-bc-zBY" secondAttribute="baseline" id="kT9-qd-MsJ"/>
-                                    <constraint firstItem="CQy-NN-Hnj" firstAttribute="firstBaseline" secondItem="gkJ-bc-zBY" secondAttribute="firstBaseline" id="klu-9x-Cv8"/>
-                                    <constraint firstItem="UNR-Fs-uRh" firstAttribute="baseline" secondItem="CQy-NN-Hnj" secondAttribute="baseline" id="lKc-0O-pvg"/>
-                                    <constraint firstItem="CQy-NN-Hnj" firstAttribute="baseline" secondItem="r51-4G-x4h" secondAttribute="baseline" id="laN-AE-BXm"/>
-                                    <constraint firstItem="jhX-Wn-tLh" firstAttribute="baseline" secondItem="UNR-Fs-uRh" secondAttribute="baseline" id="lct-x2-uTF"/>
-                                    <constraint firstItem="UNR-Fs-uRh" firstAttribute="baseline" secondItem="r51-4G-x4h" secondAttribute="baseline" id="loA-42-KcJ"/>
-                                    <constraint firstItem="gkJ-bc-zBY" firstAttribute="firstBaseline" secondItem="jhX-Wn-tLh" secondAttribute="firstBaseline" id="nce-mR-9G1"/>
-                                    <constraint firstItem="UNR-Fs-uRh" firstAttribute="baseline" secondItem="Ujo-PS-Upe" secondAttribute="baseline" id="o5q-yU-jYF"/>
-                                    <constraint firstItem="gkJ-bc-zBY" firstAttribute="baseline" secondItem="r51-4G-x4h" secondAttribute="baseline" id="oNM-aL-LV4"/>
-                                    <constraint firstItem="r51-4G-x4h" firstAttribute="firstBaseline" secondItem="Ujo-PS-Upe" secondAttribute="firstBaseline" id="orv-8V-dES"/>
-                                    <constraint firstItem="Ujo-PS-Upe" firstAttribute="baseline" secondItem="r51-4G-x4h" secondAttribute="baseline" id="pTT-Zz-KY5"/>
-                                    <constraint firstItem="UNR-Fs-uRh" firstAttribute="firstBaseline" secondItem="CQy-NN-Hnj" secondAttribute="firstBaseline" id="pkM-6Q-Mi6"/>
-                                    <constraint firstItem="UNR-Fs-uRh" firstAttribute="baseline" secondItem="gkJ-bc-zBY" secondAttribute="baseline" id="pvj-TX-4mK"/>
-                                    <constraint firstItem="CQy-NN-Hnj" firstAttribute="firstBaseline" secondItem="gkJ-bc-zBY" secondAttribute="firstBaseline" id="q4X-s8-kqr"/>
-                                    <constraint firstItem="Ujo-PS-Upe" firstAttribute="firstBaseline" secondItem="CQy-NN-Hnj" secondAttribute="firstBaseline" id="r5K-Sb-2cV"/>
-                                    <constraint firstItem="gkJ-bc-zBY" firstAttribute="firstBaseline" secondItem="Ujo-PS-Upe" secondAttribute="firstBaseline" id="rPK-ia-Cv9"/>
-                                    <constraint firstItem="Ujo-PS-Upe" firstAttribute="baseline" secondItem="gkJ-bc-zBY" secondAttribute="baseline" id="rfW-cD-oIY"/>
-                                    <constraint firstItem="r51-4G-x4h" firstAttribute="baseline" secondItem="UNR-Fs-uRh" secondAttribute="baseline" id="rlE-4L-sQx"/>
-                                    <constraint firstItem="jhX-Wn-tLh" firstAttribute="firstBaseline" secondItem="gkJ-bc-zBY" secondAttribute="firstBaseline" id="s2W-b4-KbV"/>
-                                    <constraint firstItem="UNR-Fs-uRh" firstAttribute="firstBaseline" secondItem="jhX-Wn-tLh" secondAttribute="firstBaseline" id="slm-XZ-556"/>
-                                    <constraint firstItem="UNR-Fs-uRh" firstAttribute="firstBaseline" secondItem="CQy-NN-Hnj" secondAttribute="firstBaseline" id="tGm-aM-HeT"/>
-                                    <constraint firstItem="UNR-Fs-uRh" firstAttribute="baseline" secondItem="gkJ-bc-zBY" secondAttribute="baseline" id="tGs-T2-2jC"/>
-                                    <constraint firstItem="Ujo-PS-Upe" firstAttribute="baseline" secondItem="CQy-NN-Hnj" secondAttribute="baseline" id="uKr-cl-zBT"/>
-                                    <constraint firstAttribute="width" secondItem="NjS-Up-ebO" secondAttribute="height" multiplier="6:1" id="uLG-0a-aIr"/>
-                                    <constraint firstItem="Ujo-PS-Upe" firstAttribute="firstBaseline" secondItem="CQy-NN-Hnj" secondAttribute="firstBaseline" id="uee-HI-8dW"/>
-                                    <constraint firstItem="UNR-Fs-uRh" firstAttribute="firstBaseline" secondItem="gkJ-bc-zBY" secondAttribute="firstBaseline" id="uxY-Mn-dfZ"/>
-                                    <constraint firstItem="jhX-Wn-tLh" firstAttribute="firstBaseline" secondItem="UNR-Fs-uRh" secondAttribute="firstBaseline" id="v8S-Bo-y4D"/>
-                                    <constraint firstItem="gkJ-bc-zBY" firstAttribute="firstBaseline" secondItem="Ujo-PS-Upe" secondAttribute="firstBaseline" id="vPh-rZ-MiN"/>
-                                    <constraint firstItem="UNR-Fs-uRh" firstAttribute="firstBaseline" secondItem="jhX-Wn-tLh" secondAttribute="firstBaseline" id="vrV-K0-Ru4"/>
-                                    <constraint firstItem="gkJ-bc-zBY" firstAttribute="firstBaseline" secondItem="UNR-Fs-uRh" secondAttribute="firstBaseline" id="w3b-vC-I04"/>
-                                    <constraint firstItem="Ujo-PS-Upe" firstAttribute="baseline" secondItem="gkJ-bc-zBY" secondAttribute="baseline" id="wOE-Ya-2VA"/>
-                                    <constraint firstItem="UNR-Fs-uRh" firstAttribute="firstBaseline" secondItem="r51-4G-x4h" secondAttribute="firstBaseline" id="xTc-nr-IZL"/>
-                                    <constraint firstItem="gkJ-bc-zBY" firstAttribute="baseline" secondItem="Ujo-PS-Upe" secondAttribute="baseline" id="xYN-SH-pID"/>
-                                    <constraint firstItem="r51-4G-x4h" firstAttribute="baseline" secondItem="jhX-Wn-tLh" secondAttribute="baseline" id="yLx-1m-gc1"/>
-                                    <constraint firstItem="Ujo-PS-Upe" firstAttribute="baseline" secondItem="CQy-NN-Hnj" secondAttribute="baseline" id="yOc-gU-GWW"/>
-                                    <constraint firstItem="r51-4G-x4h" firstAttribute="baseline" secondItem="gkJ-bc-zBY" secondAttribute="baseline" id="ysA-4J-j0P"/>
-                                    <constraint firstItem="r51-4G-x4h" firstAttribute="firstBaseline" secondItem="Ujo-PS-Upe" secondAttribute="firstBaseline" id="z1F-wl-9YX"/>
-                                    <constraint firstItem="UNR-Fs-uRh" firstAttribute="baseline" secondItem="gkJ-bc-zBY" secondAttribute="baseline" id="zFn-pe-ZXB"/>
-                                    <constraint firstItem="Ujo-PS-Upe" firstAttribute="baseline" secondItem="r51-4G-x4h" secondAttribute="baseline" id="zQA-YR-22R"/>
-                                    <constraint firstItem="jhX-Wn-tLh" firstAttribute="baseline" secondItem="r51-4G-x4h" secondAttribute="baseline" id="zkR-SS-DeY"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.82352941180000006" green="0.74509803919999995" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

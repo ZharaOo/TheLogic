@@ -12,7 +12,7 @@
 "В предыдущем ответе" = "In previous answer";
 "%@ вы правильно угадали %ld %@. %@%@" = "%@ you guessed %ld %@. %@%@";
 "%@ вы не угадали ни одного цвета." = "%@ you didn’t guess no one color. ";
-"%d из них стоят на своем месте." = "%d chips are on the right place. ";
+"Для %d %@ место верно." = "For %d %@ place is right. ";
 "При этом все цвета стоят не на своем месте." = "Wherein all chips are on the wrong place. ";
 "Для %d %@ место неверно." = "For %d %@ place is wrong. ";
 "Ходы: %ld" = "Moves: %ld";

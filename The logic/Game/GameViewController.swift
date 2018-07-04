@@ -141,17 +141,18 @@ class GameViewController: UIViewController, LogicGameDelegate, RowViewDelegate, 
                     numberOfBlack += 1
                 }
             }
-
-            let answerForBlack = numberOfBlack > 0 ? String(format:NSLocalizedString("%d из них стоят на своем месте.", comment: ""), numberOfBlack) : ""
+            let blackColorString = numberOfBlack == 1 ? NSLocalizedString("цветa", comment: "") : NSLocalizedString("цветов", comment: "")
+            let answerForBlack = numberOfBlack > 0 ? String(format:NSLocalizedString("Для %d %@ место верно.", comment: ""), numberOfBlack, blackColorString) : ""
+            
             var answerForWhite = ""
 
             if answerForBlack == "" {
                 answerForWhite = NSLocalizedString("При этом все цвета стоят не на своем месте.", comment: "")
             }
             else {
-                let colorString = numberOfWhite == 1 ? NSLocalizedString("цветa", comment: "") : NSLocalizedString("цветов", comment: "")
+                let whiteColorString = numberOfWhite == 1 ? NSLocalizedString("цветa", comment: "") : NSLocalizedString("цветов", comment: "")
                 
-                answerForWhite = numberOfWhite > 0 ? String(format:NSLocalizedString("Для %d %@ место неверно.", comment: ""), numberOfWhite, colorString) : ""
+                answerForWhite = numberOfWhite > 0 ? String(format:NSLocalizedString("Для %d %@ место неверно.", comment: ""), numberOfWhite, whiteColorString) : ""
             }
             let colorString = numberOfWhite == 1 ? NSLocalizedString("цвет", comment: "") : NSLocalizedString("цвета", comment: "")
             return String(format:NSLocalizedString("%@ вы правильно угадали %ld %@. %@%@", comment: ""), startString, rows[i].answer!.count, colorString, answerForBlack, answerForWhite)
