@@ -154,7 +154,8 @@ class GameViewController: UIViewController, LogicGameDelegate, RowViewDelegate, 
                 
                 answerForWhite = numberOfWhite > 0 ? String(format:NSLocalizedString("Для %d %@ место неверно.", comment: ""), numberOfWhite, whiteColorString) : ""
             }
-            let colorString = numberOfWhite == 1 ? NSLocalizedString("цвет", comment: "") : NSLocalizedString("цвета", comment: "")
+            let colorString = rows[i].answer!.count == 1 ? NSLocalizedString("цвет", comment: "") : NSLocalizedString("цвета", comment: "")
+            
             return String(format:NSLocalizedString("%@ вы правильно угадали %ld %@. %@%@", comment: ""), startString, rows[i].answer!.count, colorString, answerForBlack, answerForWhite)
         }
         else {
