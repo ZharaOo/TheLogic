@@ -86,7 +86,7 @@
                                 </subviews>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="19t-Cx-G8A">
-                                <rect key="frame" x="205" y="517" width="30" height="30"/>
+                                <rect key="frame" x="196" y="498" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                 <state key="normal" title="GC"/>
                                 <connections>
@@ -430,7 +430,7 @@ Try to guess a sequence as fast as you can. Good luck!</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xtu-Sq-X6e">
-                                <rect key="frame" x="214" y="508" width="30" height="30"/>
+                                <rect key="frame" x="196" y="498" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                 <state key="normal" title="GC"/>
                                 <connections>
@@ -542,6 +542,6 @@ Try to guess a sequence as fast as you can. Good luck!</string>
         <image name="yellowButton640" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="VXQ-9H-Y8h"/>
+        <segue reference="Jk1-6G-Qxx"/>
     </inferredMetricsTieBreakers>
 </document>

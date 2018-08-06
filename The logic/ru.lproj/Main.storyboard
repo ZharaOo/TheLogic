@@ -86,9 +86,12 @@
                                 </subviews>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wT1-2S-DBX">
-                                <rect key="frame" x="216" y="517" width="30" height="30"/>
+                                <rect key="frame" x="196" y="498" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                 <state key="normal" title="GC"/>
+                                <connections>
+                                    <action selector="showLeaderboard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kNZ-oM-wuY"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.82352941180000006" green="0.74509803919999995" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -431,7 +434,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aBk-Un-0fA">
-                                <rect key="frame" x="208" y="512" width="30" height="30"/>
+                                <rect key="frame" x="196" y="498" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                 <state key="normal" title="GC"/>
                                 <connections>
@@ -543,6 +546,6 @@
         <image name="yellowButton640" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="VXQ-9H-Y8h"/>
+        <segue reference="Jk1-6G-Qxx"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -198,6 +198,66 @@ class FinishViewController: UIViewController, GADInterstitialDelegate, GKGameCen
     
     func checkForAchivements(moves: Int, time: Time) {
         
+        var achievements = [GKAchievement]()
+        
+        achievements.append(GKAchievement(identifier: "begin001"))
+        
+        switch moves {
+        case 1:
+            achievements.append(configureAchievement(id: "oneturn001"))
+        case 2:
+            achievements.append(configureAchievement(id: "twoturn002"))
+        case 3:
+            achievements.append(configureAchievement(id: "threeturns003"))
+        case 4:
+            achievements.append(configureAchievement(id: "fourturn004"))
+        case 5:
+            achievements.append(configureAchievement(id: "fiveturn005"))
+        case 6:
+            achievements.append(configureAchievement(id: "sixturn006"))
+        case 7:
+            achievements.append(configureAchievement(id: "seventurn007"))
+        default:
+            return
+        }
+        
+        if time.minutes == 0 {
+            if time.seconds <= 10 {
+                achievements.append(configureAchievement(id: "time10sec01"))
+            }
+            else if time.seconds <= 30 {
+                achievements.append(configureAchievement(id: "time1020sec01"))
+            }
+            else if time.seconds <= 59 {
+                achievements.append(configureAchievement(id: "time301min01"))
+            }
+        }
+        else if time.minutes <= 2 {
+            achievements.append(configureAchievement(id: "time12min01"))
+        }
+        else if time.minutes <= 3 {
+            achievements.append(configureAchievement(id: "time23min03"))
+        }
+        else if time.minutes <= 5 {
+            achievements.append(configureAchievement(id: "time35min01"))
+        }
+        
+        GKAchievement.report(achievements) { error in
+            if error != nil {
+                print(error!.localizedDescription)
+            }
+            else {
+                print("Score submitted")
+            }
+        }
+    }
+    
+    func configureAchievement(id: String) -> GKAchievement {
+        let achievement = GKAchievement(identifier: id)
+        achievement.percentComplete = 100.0
+        achievement.showsCompletionBanner = true
+        
+        return achievement
     }
     
 }
