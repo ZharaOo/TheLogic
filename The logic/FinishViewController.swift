@@ -35,6 +35,9 @@ class FinishViewController: UIViewController, GADInterstitialDelegate, GKGameCen
     
     var interstitial: GADInterstitial?
     
+    
+    //MARK: - lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         showRightSequence()
@@ -43,6 +46,9 @@ class FinishViewController: UIViewController, GADInterstitialDelegate, GKGameCen
         if UserDefaults.standard.string(forKey: Constants.kRules) != nil {
             interstitial = createAndLoadInterstitial(id: Google.adID)
         }
+        
+        reportTimeToGameCenter(time: time)
+        checkForAchivements(moves: moves, time: time)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -74,6 +80,10 @@ class FinishViewController: UIViewController, GADInterstitialDelegate, GKGameCen
         }
     }
     
+    
+    //MARK: - IBActions
+    
+    
     @IBAction func playAgain(_ sender: Any) {
         delegate!.startGame()
         navigationController?.popViewController(animated: true)
@@ -92,9 +102,40 @@ class FinishViewController: UIViewController, GADInterstitialDelegate, GKGameCen
         self.present(gcVC, animated: true, completion: nil)
     }
     
+    
+    //MARK: - GADInterstitialDelegate
+    
+    
+    func interstitialDidReceiveAd(_ ad: GADInterstitial) {
+        interstitial?.present(fromRootViewController: self)
+    }
+    
+    func interstitialWillDismissScreen(_ ad: GADInterstitial) {
+        interstitial = nil
+    }
+    
+    
+    //MARK: - GKGameCenterControllerDelegate
+    
+    
     func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController) {
         gameCenterViewController.dismiss(animated: true, completion: nil)
     }
+    
+    
+    //MARK: - Ad creation
+    
+    
+    func createAndLoadInterstitial(id: String) -> GADInterstitial {
+        let interstitial = GADInterstitial(adUnitID: id)
+        interstitial.delegate = self
+        interstitial.load(GADRequest())
+        return interstitial
+    }
+    
+    
+    //MARK: - Show game information
+    
     
     func showAlert(title: String, message: String, responce: ((_ didCancel: Bool) -> ())?) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
@@ -118,21 +159,6 @@ class FinishViewController: UIViewController, GADInterstitialDelegate, GKGameCen
         present(alertController, animated: true, completion: nil)
     }
     
-    func createAndLoadInterstitial(id: String) -> GADInterstitial {
-        let interstitial = GADInterstitial(adUnitID: id)
-        interstitial.delegate = self
-        interstitial.load(GADRequest())
-        return interstitial
-    }
-    
-    func interstitialDidReceiveAd(_ ad: GADInterstitial) {
-        interstitial?.present(fromRootViewController: self)
-    }
-    
-    func interstitialWillDismissScreen(_ ad: GADInterstitial) {
-        interstitial = nil
-    }
-    
     func showRightSequence() {
         chipImageView1.image = rightSequense[0].image
         chipImageView2.image = rightSequense[1].image
@@ -149,6 +175,29 @@ class FinishViewController: UIViewController, GADInterstitialDelegate, GKGameCen
             let bestTime = NSKeyedUnarchiver.unarchiveObject(with: dataBestTime) as! Time
             timeLabel.text = String(format: NSLocalizedString("Время: %@\nЛучшее: %@", comment: ""), time.description(), bestTime.description())
         }
+    }
+    
+    
+    //MARK: - Game Center methods
+    
+    
+    func reportTimeToGameCenter(time: Time) {
+        let leaderboardID = "LogicBestTime"
+        let sScore = GKScore(leaderboardIdentifier: leaderboardID)
+        sScore.value = Int64(time.totalSeconds)
+        
+        GKScore.report([sScore], withCompletionHandler: { error in
+            if error != nil {
+                print(error!.localizedDescription)
+            }
+            else {
+                print("Score submitted")
+            }
+        })
+    }
+    
+    func checkForAchivements(moves: Int, time: Time) {
+        
     }
     
 }

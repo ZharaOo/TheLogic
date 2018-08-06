@@ -12,6 +12,10 @@ class Time: NSObject, NSCoding {
     var seconds = 0
     var minutes = 0
     
+    var totalSeconds: Int {
+        return minutes * 60 + seconds
+    }
+    
     override init() {super.init()}
     
     required init?(coder aDecoder: NSCoder) {
