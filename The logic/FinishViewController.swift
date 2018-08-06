@@ -200,7 +200,7 @@ class FinishViewController: UIViewController, GADInterstitialDelegate, GKGameCen
         
         var achievements = [GKAchievement]()
         
-        achievements.append(GKAchievement(identifier: "begin001"))
+        achievements.append(configureAchievement(id: "begin001"))
         
         switch moves {
         case 1:
