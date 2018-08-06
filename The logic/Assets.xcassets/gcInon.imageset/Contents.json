@@ -2,12 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "gameCenter.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "gameCenter@2x.png",
+      "filename" : "Game-Center-icon.png",
       "scale" : "2x"
     },
     {

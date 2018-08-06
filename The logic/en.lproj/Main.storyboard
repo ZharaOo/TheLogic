@@ -88,7 +88,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="19t-Cx-G8A">
                                 <rect key="frame" x="196" y="498" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
-                                <state key="normal" title="GC"/>
+                                <state key="normal" backgroundImage="gcInon"/>
                                 <connections>
                                     <action selector="showLeaderboard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zn9-tt-DQ5"/>
                                 </connections>
@@ -432,7 +432,7 @@ Try to guess a sequence as fast as you can. Good luck!</string>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xtu-Sq-X6e">
                                 <rect key="frame" x="196" y="498" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
-                                <state key="normal" title="GC"/>
+                                <state key="normal" backgroundImage="gcInon"/>
                                 <connections>
                                     <action selector="showLeaderboard:" destination="ngm-Zp-cQR" eventType="touchUpInside" id="qRn-WC-7sr"/>
                                 </connections>
@@ -530,6 +530,7 @@ Try to guess a sequence as fast as you can. Good luck!</string>
         <image name="blackButton640" width="50" height="50"/>
         <image name="blueButton640" width="50" height="50"/>
         <image name="buttonsRules" width="300" height="45"/>
+        <image name="gcInon" width="256" height="256"/>
         <image name="greenButton640" width="50" height="50"/>
         <image name="imagesRules" width="300" height="45"/>
         <image name="logo" width="200" height="100"/>
@@ -542,6 +543,6 @@ Try to guess a sequence as fast as you can. Good luck!</string>
         <image name="yellowButton640" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Jk1-6G-Qxx"/>
+        <segue reference="VXQ-9H-Y8h"/>
     </inferredMetricsTieBreakers>
 </document>
