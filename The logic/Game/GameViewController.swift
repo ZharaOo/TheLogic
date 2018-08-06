@@ -24,27 +24,10 @@ class GameViewController: UIViewController, LogicGameDelegate, RowViewDelegate, 
     private var rows: [RowView] = []
     private var playerSequence: [ChipImageView]? = nil
 
-    func initButtons() {
-        yellowButton.color = .Yellow
-        greenButton.color = .Green
-        blueButton.color = .Blue
-        blackButton.color = .Black
-        redButton.color = .Red
-        whiteButton.color = .White
-    }
 
-    @IBAction func chipClick(button: ChipButton) {
-        let row = rows.last!
-        row.placeChip(withImage: button.currentBackgroundImage!, color: button.color)
-
-        if row.isFull() {
-            playerSequence = row.getPlayerSequence()
-            row.placeAnswerChip(answer: game.checkAnswerOfPlayerSequence(playerSequence!))
-            addRowToScrollView()
-        }
-
-    }
-
+    //MARK: - lifecycle
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -56,6 +39,47 @@ class GameViewController: UIViewController, LogicGameDelegate, RowViewDelegate, 
             startGame()
         }
     }
+    
+    
+    //MARK: - IBActions
+    
+    
+    @IBAction func chipClick(button: ChipButton) {
+        let row = rows.last!
+        row.placeChip(withImage: button.currentBackgroundImage!, color: button.color)
+        
+        if row.isFull() {
+            playerSequence = row.getPlayerSequence()
+            row.placeAnswerChip(answer: game.checkAnswerOfPlayerSequence(playerSequence!))
+            addRowToScrollView()
+        }
+        
+    }
+    
+    
+    //MARK: - LogicGameDelegate
+    
+    
+    func endGame() {
+        performSegue(withIdentifier: Constants.kGameToFinish, sender: self)
+    }
+
+    
+    //MARK: - preparations
+    
+    
+    func initButtons() {
+        yellowButton.color = .Yellow
+        greenButton.color = .Green
+        blueButton.color = .Blue
+        blackButton.color = .Black
+        redButton.color = .Red
+        whiteButton.color = .White
+    }
+    
+    
+    //MARK: - Game methods
+    
 
     func startGame() {
         scrollView.subviews.forEach() { sv in
@@ -93,6 +117,10 @@ class GameViewController: UIViewController, LogicGameDelegate, RowViewDelegate, 
         let bottomOffSet = CGPoint(x: 0.0, y: max(0.0,  self.scrollView.contentSize.height - self.scrollView.bounds.size.height))
         scrollView.setContentOffset(bottomOffSet, animated: true)
     }
+    
+    
+    //MARK: - Rules and hints methods
+    
 
     func addHint(height: CGFloat) {
         removeRulesFromScrollView()
@@ -126,6 +154,32 @@ class GameViewController: UIViewController, LogicGameDelegate, RowViewDelegate, 
         scrollView.addSubview(createRulesView(text: rulesText, frame: frame))
         
         scrollView.contentSize = CGSize(width: 0, height: frame.maxY)
+    }
+    
+    func createRulesView(text: String, frame:CGRect) -> UIView {
+        let rulesView = UIView(frame: frame)
+        rulesView.backgroundColor = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.5)
+        
+        let textView = UITextView(frame: CGRect(x: 0.0, y: 0.0, width: rulesView.frame.width, height: 100.0))
+        textView.backgroundColor = UIColor.clear
+        textView.isEditable = false
+        textView.isSelectable = false
+        textView.isScrollEnabled = false
+        textView.textAlignment = NSTextAlignment.center
+        textView.textColor = UIColor.white
+        textView.font = UIFont.systemFont(ofSize: 18)
+        textView.text = text
+        
+        let fixedWidth = textView.frame.width
+        let newSize = textView.sizeThatFits(CGSize(width: fixedWidth, height: CGFloat.greatestFiniteMagnitude))
+        var newFrame = textView.frame;
+        newFrame.size = CGSize(width: max(newSize.width, fixedWidth), height: newSize.height);
+        textView.frame = newFrame;
+        textView.center = CGPoint(x: rulesView.frame.width * 0.5, y: rulesView.frame.height * 0.5);
+        
+        rulesView.addSubview(textView)
+        
+        return rulesView
     }
 
     func generateAnswerString(startString: String, rowIndex i:Int) -> String {
@@ -163,32 +217,6 @@ class GameViewController: UIViewController, LogicGameDelegate, RowViewDelegate, 
         }
     }
 
-    func createRulesView(text: String, frame:CGRect) -> UIView {
-        let rulesView = UIView(frame: frame)
-        rulesView.backgroundColor = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.5)
-
-        let textView = UITextView(frame: CGRect(x: 0.0, y: 0.0, width: rulesView.frame.width, height: 100.0))
-        textView.backgroundColor = UIColor.clear
-        textView.isEditable = false
-        textView.isSelectable = false
-        textView.isScrollEnabled = false
-        textView.textAlignment = NSTextAlignment.center
-        textView.textColor = UIColor.white
-        textView.font = UIFont.systemFont(ofSize: 18)
-        textView.text = text
-
-        let fixedWidth = textView.frame.width
-        let newSize = textView.sizeThatFits(CGSize(width: fixedWidth, height: CGFloat.greatestFiniteMagnitude))
-        var newFrame = textView.frame;
-        newFrame.size = CGSize(width: max(newSize.width, fixedWidth), height: newSize.height);
-        textView.frame = newFrame;
-        textView.center = CGPoint(x: rulesView.frame.width * 0.5, y: rulesView.frame.height * 0.5);
-
-        rulesView.addSubview(textView)
-
-        return rulesView
-    }
-
     func removeRulesFromScrollView() {
         for rv in self.scrollView.subviews {
             for textView in rv.subviews {
@@ -199,10 +227,10 @@ class GameViewController: UIViewController, LogicGameDelegate, RowViewDelegate, 
             }
         }
     }
-
-    func endGame() {
-        performSegue(withIdentifier: Constants.kGameToFinish, sender: self)
-    }
+    
+    
+    //MARK: - segue methods
+    
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == Constants.kGameToFinish {

@@ -27,6 +27,10 @@ class LogicGame: NSObject {
     
     weak var delegate: LogicGameDelegate!
     
+    
+    //MARK: - initializer
+    
+    
     override init() {
         var hSequence = Array<ChipColor>()
         
@@ -43,9 +47,26 @@ class LogicGame: NSObject {
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(timerTick), userInfo: nil, repeats: true)
     }
     
+    
+    //MARK: - timer methods
+    
+    
     @objc func timerTick() {
         time.increaseBySecond()
     }
+    
+    
+    //MARK: - other methods
+    
+    
+    private func endGame(answers: Array<AnswerType>) -> Bool {
+        let a = AnswerType.CorrectColorAndPlace
+        return [a, a, a, a] == answers
+    }
+    
+    
+    //MARK: - check answer
+    
     
     func checkAnswer(nums: Array<ChipColor>, sequenceImgs: Array<ChipImageView>) -> Array<AnswerType> {
         self.moves += 1
@@ -90,10 +111,9 @@ class LogicGame: NSObject {
         return checkAnswer(nums: colors, sequenceImgs: sequenceImg)
     }
     
-    private func endGame(answers: Array<AnswerType>) -> Bool {
-        let a = AnswerType.CorrectColorAndPlace
-        return [a, a, a, a] == answers
-    }
+    
+    //MARK: - write score
+    
     
     private func writeBestMoves() {
         let ud = UserDefaults.standard

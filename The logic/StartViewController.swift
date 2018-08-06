@@ -16,6 +16,8 @@ class StartViewController: UIViewController, GKGameCenterControllerDelegate {
     
     private var gcEnabled = false
     
+    //MARK: - lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         authenticateLocalPlayer()
@@ -32,6 +34,10 @@ class StartViewController: UIViewController, GKGameCenterControllerDelegate {
         }
     }
     
+    
+    //MARK: - IBActions
+    
+    
     @IBAction func hintSwitched(_ sender: UISwitch) {
         let ud = UserDefaults.standard
         ud.set(hintSwitch.isOn, forKey: Constants.kHint)
@@ -45,9 +51,17 @@ class StartViewController: UIViewController, GKGameCenterControllerDelegate {
         self.present(gcVC, animated: true, completion: nil)
     }
     
+    
+    //MARK: - GKGameCenterControllerDelegate
+    
+    
     func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController) {
         gameCenterViewController.dismiss(animated: true, completion: nil)
     }
+    
+    
+    //MARK: - Game center methods
+    
     
     func authenticateLocalPlayer() {
         let localPlayer: GKLocalPlayer = GKLocalPlayer.localPlayer()

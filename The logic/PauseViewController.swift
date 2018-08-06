@@ -20,7 +20,6 @@ class PauseViewController: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     
-    
     @IBAction func playAgain(_ sender: Any) {
         navigationController?.popViewController(animated: true)
         delegate.startGame()

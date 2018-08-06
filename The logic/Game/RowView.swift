@@ -31,6 +31,14 @@ class RowView: UIView {
     
     weak var delegate: RowViewDelegate!
     
+    
+    //MARK: - Initializatioin
+    
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
     class func instanceFromNib(frame: CGRect) -> RowView {
         let rv = UINib(nibName: "RowView", bundle: nil).instantiate(withOwner: nil, options:nil)[0] as! RowView
         rv.frame = frame
@@ -38,6 +46,10 @@ class RowView: UIView {
         
         return rv
     }
+    
+    
+    //MARK: - Preparations
+    
     
     func setup() {
         chipImageViews = [chipImageView1, chipImageView2, chipImageView3, chipImageView4]
@@ -56,16 +68,16 @@ class RowView: UIView {
         show()
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
-    
     func show() {
         self.alpha = 0.0
         UIView.animate(withDuration: 0.2) {
             self.alpha = 1.0
         }
     }
+    
+    
+    //MARK: - placing chips
+    
     
     func placeChip(withImage image: UIImage, color: ChipColor) {
         for civ in chipImageViews {
@@ -106,6 +118,10 @@ class RowView: UIView {
         },
                           completion: nil)
     }
+    
+    
+    //MARK: - user methods
+    
     
     func isFull() -> Bool {
         for civ in chipImageViews {
