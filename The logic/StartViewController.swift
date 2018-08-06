@@ -52,8 +52,8 @@ class StartViewController: UIViewController, GKGameCenterControllerDelegate {
     func authenticateLocalPlayer() {
         let localPlayer: GKLocalPlayer = GKLocalPlayer.localPlayer()
         
-        localPlayer.authenticateHandler = {(ViewController, error) -> Void in
-            if((ViewController) != nil) {
+        localPlayer.authenticateHandler = { ViewController, error in
+            if ViewController != nil {
                 self.present(ViewController!, animated: true, completion: nil)
             }
         }
