@@ -85,6 +85,14 @@
                                     </label>
                                 </subviews>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="19t-Cx-G8A">
+                                <rect key="frame" x="205" y="517" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                <state key="normal" title="GC"/>
+                                <connections>
+                                    <action selector="showLeaderboard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zn9-tt-DQ5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.82352941180000006" green="0.74509803919999995" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
@@ -421,6 +429,14 @@ Try to guess a sequence as fast as you can. Good luck!</string>
                                     <segue destination="7P0-gn-HZu" kind="show" id="VXQ-9H-Y8h"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xtu-Sq-X6e">
+                                <rect key="frame" x="214" y="508" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                <state key="normal" title="GC"/>
+                                <connections>
+                                    <action selector="showLeaderboard:" destination="ngm-Zp-cQR" eventType="touchUpInside" id="qRn-WC-7sr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.82352941180000006" green="0.74509803919999995" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="bKK-ln-I3r"/>
@@ -526,6 +542,6 @@ Try to guess a sequence as fast as you can. Good luck!</string>
         <image name="yellowButton640" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Jk1-6G-Qxx"/>
+        <segue reference="VXQ-9H-Y8h"/>
     </inferredMetricsTieBreakers>
 </document>

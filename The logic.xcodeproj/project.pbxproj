@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		233E47A0BB173D877D0FFD04 /* Pods_The_logic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B8EE5A26543BFEC822988E9 /* Pods_The_logic.framework */; };
+		DF4D014C2118B23100AA1249 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF4D014B2118B23100AA1249 /* GameKit.framework */; };
 		DF5A465020CF209A00C85462 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5A464F20CF209A00C85462 /* AppDelegate.swift */; };
 		DF5A465220CF209A00C85462 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5A465120CF209A00C85462 /* StartViewController.swift */; };
 		DF5A465520CF209A00C85462 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF5A465320CF209A00C85462 /* Main.storyboard */; };
@@ -31,6 +32,7 @@
 /* Begin PBXFileReference section */
 		40F3389EB6C19BBF91ED6B31 /* Pods-The logic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The logic.debug.xcconfig"; path = "Pods/Target Support Files/Pods-The logic/Pods-The logic.debug.xcconfig"; sourceTree = "<group>"; };
 		5B8EE5A26543BFEC822988E9 /* Pods_The_logic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_The_logic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF4D014B2118B23100AA1249 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		DF5A464C20CF209A00C85462 /* The logic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The logic.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF5A464F20CF209A00C85462 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DF5A465120CF209A00C85462 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF4D014C2118B23100AA1249 /* GameKit.framework in Frameworks */,
 				DF84A72C20D0759400867A77 /* StoreKit.framework in Frameworks */,
 				233E47A0BB173D877D0FFD04 /* Pods_The_logic.framework in Frameworks */,
 			);
@@ -73,6 +76,7 @@
 		683926BE02B457EA7A5FA2B5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DF4D014B2118B23100AA1249 /* GameKit.framework */,
 				DF84A72B20D0759400867A77 /* StoreKit.framework */,
 				5B8EE5A26543BFEC822988E9 /* Pods_The_logic.framework */,
 			);
@@ -172,6 +176,11 @@
 				TargetAttributes = {
 					DF5A464B20CF209A00C85462 = {
 						CreatedOnToolsVersion = 9.4;
+						SystemCapabilities = {
+							com.apple.GameCenter.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};

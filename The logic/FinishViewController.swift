@@ -8,13 +8,13 @@
 
 import UIKit
 import GoogleMobileAds
-import StoreKit
+import GameKit
 
 protocol FinishViewControllerDelegate: class {
     func startGame()
 }
 
-class FinishViewController: UIViewController, GADInterstitialDelegate {
+class FinishViewController: UIViewController, GADInterstitialDelegate, GKGameCenterControllerDelegate {
     
     @IBOutlet weak var chipImageView1: ChipImageView!
     @IBOutlet weak var chipImageView2: ChipImageView!
@@ -34,16 +34,6 @@ class FinishViewController: UIViewController, GADInterstitialDelegate {
     var rateShown = false
     
     var interstitial: GADInterstitial?
-    
-    @IBAction func playAgain(_ sender: Any) {
-        delegate!.startGame()
-        navigationController?.popViewController(animated: true)
-    }
-    
-    @IBAction func hintSwitched(_ sender: Any) {
-        let ud = UserDefaults.standard
-        ud.set(hintSwitch.isOn, forKey: Constants.kHint)
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -82,6 +72,28 @@ class FinishViewController: UIViewController, GADInterstitialDelegate {
             }
             self.hintSwitch.isOn = ud.bool(forKey: Constants.kHint)
         }
+    }
+    
+    @IBAction func playAgain(_ sender: Any) {
+        delegate!.startGame()
+        navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func hintSwitched(_ sender: Any) {
+        let ud = UserDefaults.standard
+        ud.set(hintSwitch.isOn, forKey: Constants.kHint)
+    }
+    
+    @IBAction func showLeaderboard(_ sender: UIButton) {
+        let gcVC: GKGameCenterViewController = GKGameCenterViewController()
+        gcVC.gameCenterDelegate = self
+        gcVC.viewState = GKGameCenterViewControllerState.default
+        //        gcVC.leaderboardIdentifier = "LogicBestTime"
+        self.present(gcVC, animated: true, completion: nil)
+    }
+    
+    func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController) {
+        gameCenterViewController.dismiss(animated: true, completion: nil)
     }
     
     func showAlert(title: String, message: String, responce: ((_ didCancel: Bool) -> ())?) {

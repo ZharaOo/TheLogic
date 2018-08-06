@@ -85,6 +85,11 @@
                                     </label>
                                 </subviews>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wT1-2S-DBX">
+                                <rect key="frame" x="216" y="517" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                <state key="normal" title="GC"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.82352941180000006" green="0.74509803919999995" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
@@ -423,6 +428,14 @@
                                 <state key="normal" backgroundImage="rules"/>
                                 <connections>
                                     <segue destination="7P0-gn-HZu" kind="show" id="VXQ-9H-Y8h"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aBk-Un-0fA">
+                                <rect key="frame" x="208" y="512" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                <state key="normal" title="GC"/>
+                                <connections>
+                                    <action selector="showLeaderboard:" destination="ngm-Zp-cQR" eventType="touchUpInside" id="PPQ-UO-XHZ"/>
                                 </connections>
                             </button>
                         </subviews>
