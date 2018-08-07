@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="I06-8C-wuB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.3.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="I06-8C-wuB">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -166,7 +164,7 @@
                                     </imageView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oJU-Qq-eUo">
                                         <rect key="frame" x="0.0" y="219" width="320" height="166.5"/>
-                                        <string key="text">Upper right chips show accuracy of your answer. Black chip shows that color was guessed and it on the right place. White chip shows that color was guessed and it’s place is wrong. If there are no chips, no color is guessed.</string>
+                                        <string key="text">The small right chips show accuracy of your answer. Black chip shows that color was guessed and it on the right place. White chip shows that color was guessed and it’s place is wrong. If there are no chips, no color is guessed.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
@@ -258,7 +256,7 @@ Try to guess a sequence as fast as you can. Good luck!</string>
                                 <rect key="frame" x="10" y="498" width="300" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jhX-Wn-tLh" customClass="ChipButton" customModule="The_logic" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="50.5" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="jhX-Wn-tLh" secondAttribute="height" multiplier="1:1" id="ueG-Pg-oqg"/>
                                         </constraints>
@@ -268,7 +266,7 @@ Try to guess a sequence as fast as you can. Good luck!</string>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CQy-NN-Hnj" customClass="ChipButton" customModule="The_logic" customModuleProvider="target">
-                                        <rect key="frame" x="50.5" y="0.0" width="49.5" height="50"/>
+                                        <rect key="frame" x="50" y="0.0" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="CQy-NN-Hnj" secondAttribute="height" multiplier="1:1" id="8TD-L6-Yhg"/>
                                         </constraints>
