@@ -44,7 +44,7 @@ class FinishViewController: UIViewController, GADInterstitialDelegate, GKGameCen
         showScore()
         
         if UserDefaults.standard.string(forKey: Constants.kRules) != nil {
-            interstitial = createAndLoadInterstitial(id: Google.adID)
+            showAd()
         }
         
         reportTimeToGameCenter(time: time)
@@ -98,7 +98,6 @@ class FinishViewController: UIViewController, GADInterstitialDelegate, GKGameCen
         let gcVC: GKGameCenterViewController = GKGameCenterViewController()
         gcVC.gameCenterDelegate = self
         gcVC.viewState = GKGameCenterViewControllerState.default
-        //        gcVC.leaderboardIdentifier = "LogicBestTime"
         self.present(gcVC, animated: true, completion: nil)
     }
     
@@ -125,6 +124,13 @@ class FinishViewController: UIViewController, GADInterstitialDelegate, GKGameCen
     
     //MARK: - Ad creation
     
+    func showAd() {
+        let gamesPlayed = UserDefaults.standard.integer(forKey: "GamesPlayed")
+        if gamesPlayed % 3 == 0 {
+            self.interstitial = self.createAndLoadInterstitial(id: Google.adID)
+        }
+        UserDefaults.standard.set(gamesPlayed + 1, forKey: "GamesPlayed")
+    }
     
     func createAndLoadInterstitial(id: String) -> GADInterstitial {
         let interstitial = GADInterstitial(adUnitID: id)
